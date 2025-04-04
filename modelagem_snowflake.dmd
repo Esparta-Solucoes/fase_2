@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="modelagem_snowflak" id="93C56ABB-FDB4-E822-6857-E5F0169F449A" version="3.5">
+<createdBy>Lenovo</createdBy>
+<createdTime>2025-04-03 22:21:00 UTC</createdTime>
+<ownerDesignName>modelagem_snowflak</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>93C56ABB-FDB4-E822-6857-E5F0169F449A</designId>
+</OSDM_Design>
