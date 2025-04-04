@@ -6,6 +6,81 @@
 <createdBy>axel.chepanski</createdBy>
 <createdTime>2025-04-04 13:50:13 UTC</createdTime>
 <ownerDesignName>modelagem_snowflake</ownerDesignName>
+<dsInitialExtent>65536</dsInitialExtent>
+<dsMaxExtents>2147483645</dsMaxExtents>
 <emUniformSize>0</emUniformSize>
 <extentManagement>LOCAL</extentManagement>
+<minExtLen>65536</minExtLen>
+<dsCompression>NOCOMPRESS</dsCompression>
+<encrypt>NO</encrypt>
+<fileType>SMALLFILE</fileType>
+<inMemory>NO</inMemory>
+<dataFiles>
+<DataFile class="oracle.dbtools.crest.model.design.storage.oracle.v10g.DataFileOraclev10g" name="TBSPC_ALUNOS_01.DBF" id="021A1DDB-FAE3-131F-0DCA-BFCA275ECA7D">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjName>/u02/oradata/CDB1/orcl/TBSPC_ALUNOS_01.DBF</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 14:07:22 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<autoextend>OFF</autoextend>
+<fileName>/u02/oradata/CDB1/orcl/TBSPC_ALUNOS_01.DBF</fileName>
+<nextBlockSize>0</nextBlockSize>
+<size>31457280</size>
+</DataFile>
+<DataFile class="oracle.dbtools.crest.model.design.storage.oracle.v10g.DataFileOraclev10g" name="TBSPC_ALUNOS_02.DBF" id="5A4006E2-A532-EAD4-D8D4-0E2FF8B8281E">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjName>/u03/oradata/CDB1/orcl/TBSPC_ALUNOS_02.DBF</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 14:07:22 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<autoextend>OFF</autoextend>
+<fileName>/u03/oradata/CDB1/orcl/TBSPC_ALUNOS_02.DBF</fileName>
+<nextBlockSize>0</nextBlockSize>
+<size>31457280</size>
+</DataFile>
+<DataFile class="oracle.dbtools.crest.model.design.storage.oracle.v10g.DataFileOraclev10g" name="TBSPC_ALUNOS_03.DBF" id="6A74A1D3-8249-6828-C17D-175ADD45F42F">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjName>/u02/oradata/CDB1/orcl/TBSPC_ALUNOS_03.DBF</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 14:07:22 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<autoextend>OFF</autoextend>
+<fileName>/u02/oradata/CDB1/orcl/TBSPC_ALUNOS_03.DBF</fileName>
+<nextBlockSize>0</nextBlockSize>
+<size>31457280</size>
+</DataFile>
+<DataFile class="oracle.dbtools.crest.model.design.storage.oracle.v10g.DataFileOraclev10g" name="TBSPC_ALUNOS_04.DBF" id="ADD7C086-4C5D-CE9E-603C-E0F512397C9E">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjName>/u03/oradata/CDB1/orcl/TBSPC_ALUNOS_04.DBF</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 14:07:22 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<autoextend>OFF</autoextend>
+<fileName>/u03/oradata/CDB1/orcl/TBSPC_ALUNOS_04.DBF</fileName>
+<nextBlockSize>0</nextBlockSize>
+<size>31457280</size>
+</DataFile>
+<DataFile class="oracle.dbtools.crest.model.design.storage.oracle.v10g.DataFileOraclev10g" name="TBSPC_ALUNOS_05.DBF" id="BE7A3832-CE16-575B-96A3-11519DF7EE01">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjName>/u02/oradata/CDB1/orcl/TBSPC_ALUNOS_05.DBF</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 14:07:22 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<autoextend>OFF</autoextend>
+<fileName>/u02/oradata/CDB1/orcl/TBSPC_ALUNOS_05.DBF</fileName>
+<nextBlockSize>0</nextBlockSize>
+<size>31457280</size>
+</DataFile>
+<DataFile class="oracle.dbtools.crest.model.design.storage.oracle.v10g.DataFileOraclev10g" name="TBSPC_ALUNOS_06.DBF" id="9BC1C17E-90B1-80F7-1738-77F6F6E922CD">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjName>/u03/oradata/CDB1/orcl/TBSPC_ALUNOS_06.DBF</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 14:07:22 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<autoextend>OFF</autoextend>
+<fileName>/u03/oradata/CDB1/orcl/TBSPC_ALUNOS_06.DBF</fileName>
+<nextBlockSize>0</nextBlockSize>
+<size>31457280</size>
+</DataFile>
+</dataFiles>
 </TableSpaceOraclev10g>

@@ -5,4 +5,9 @@
 <ownerDesignName>modelagem_snowflake</ownerDesignName>
 <capitalNames>false</capitalNames>
 <designId>DABFA014-BEE0-CF51-2220-551CB8A2895B</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="8CEE6E4F-3FC2-CEC0-9E19-58819B4D9926">
+<designStoragePath>C:\Users\axel.chepanski\temp</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
 </OSDM_Design>

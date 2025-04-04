@@ -99,6 +99,7 @@
 <createdTime>2025-04-04 13:50:14 UTC</createdTime>
 <commentInRDBMS><![CDATA[FK para DIM_ENTREGADOR (profissional que realizou a entrega).]]></commentInRDBMS>
 <ownerDesignName>modelagem_snowflake</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -323,13 +324,6 @@
 <indexColumnUsage>
 <colUsage columnID="04F030C9-E7D1-4339-4479-56B56620515C"/>
 <colUsage columnID="2CC8E1A9-F90D-105B-06BB-9521DB6CCAAA"/>
-<colUsage columnID="D49166AE-0F05-0A56-96DC-1ADC6307A835"/>
-<colUsage columnID="12B31336-ADB9-5C2D-7FC6-DD9456BD883B"/>
-<colUsage columnID="922988B0-2E66-C76C-C1E1-C82E3698886C"/>
-<colUsage columnID="2B39C691-D8D1-0900-DDF8-F07C35B1BFA7"/>
-<colUsage columnID="CD63023F-6605-A79D-BCC2-D1A412CF6D92"/>
-<colUsage columnID="1245C7FB-464A-C988-FAF3-4844880B1857"/>
-<colUsage columnID="E47DD304-7C7E-F00C-B213-797B38225635"/>
 </indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="86B2E57B-1D25-0A48-907B-A16B1D31C921" schemaObject="5BC418C1-74CB-7FFB-17D5-FA20A8622766" name="PK_FATO_ENTREGA">
