@@ -1,0 +1,123 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="ABA7AF44-4C50-237E-D72F-B4CCE3163271" schemaObject="5BC418C1-74CB-7FFB-17D5-FA20A8622766" name="DIM_PRODUTO">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>RM557311</sourceObjSchema>
+<sourceObjName>DIM_PRODUTO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:13 UTC</createdTime>
+<commentInRDBMS><![CDATA[Dimensão que armazena informações detalhadas de cada produto.]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<typeID>2</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="FK_DIM_PRODUTO" id="40423750-C8F6-79FB-1144-EAAC7983B660">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>DIM_PRODUTO</sourceObjSchema>
+<sourceObjName>FK_DIM_PRODUTO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Chave primária gerada por IDENTITY para a dimensão PRODUTO.]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<defaultOntNull>true</defaultOntNull>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementDisableCache>false</autoIncrementDisableCache>
+<autoIncrementCache>20</autoIncrementCache>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="NOME_PRODUTO" id="7950C729-6C4C-CCB6-28E4-EB9E97B3E7A9">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>DIM_PRODUTO</sourceObjSchema>
+<sourceObjName>NOME_PRODUTO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nome do produto (ex.: iPhone 14, TV 50 polegadas).]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150 BYTE</dataTypeSize>
+<ownDataTypeParameters>150 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMBALAGEM" id="B5C58585-0BC6-A45F-57EE-A70116F4DB85">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>DIM_PRODUTO</sourceObjSchema>
+<sourceObjName>EMBALAGEM</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tipo de embalagem, se houver (ex.: caixa, envelope etc.).]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_SUBCATEGORIA" id="78B004F9-2CF4-0955-F027-0825173475A8">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>DIM_PRODUTO</sourceObjSchema>
+<sourceObjName>ID_SUBCATEGORIA</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Chave estrangeira para DIM_SUBCATEGORIA, definindo a subcategoria deste produto.]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F6D5CC39-190C-B75B-C22D-E53E1C0B3E22" referredColumn="29F36327-D0F1-3661-74F0-E51D765FF1BD"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9550CBA8-0521-D03E-BA76-E5E75EA8D3E8" name="PK_DIM_PRODUTO">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>RM557311</sourceObjSchema>
+<sourceObjName>PK_DIM_PRODUTO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:28 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="40423750-C8F6-79FB-1144-EAAC7983B660"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="406B87CB-DF06-BA38-0B58-F1506FDDF280" schemaObject="5BC418C1-74CB-7FFB-17D5-FA20A8622766" name="PK_DIM_PRODUTO">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>RM557311</sourceObjSchema>
+<sourceObjName>PK_DIM_PRODUTO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:16 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="40423750-C8F6-79FB-1144-EAAC7983B660"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="02F6EABA-9255-5A9B-097E-6CC2379BE85B" name="FK_PRODUTO_SUBCATEGORIA">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:41 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="78B004F9-2CF4-0955-F027-0825173475A8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="DIM_ESTADO" directorySegmentName="seg_0" id="C297A259-241D-86D5-6BBE-DB0488CE0386">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:13 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<schemaObject>5BC418C1-74CB-7FFB-17D5-FA20A8622766</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>2AC7F04E-2D34-63EA-9D79-F14AF75975D4</segment>
+<tableSpace>22A91084-2DA2-CE6D-3B7E-604B736CD1DA</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="FK_DIM_ESTADO" id="25C75389-1427-3207-9973-D16098C24C2F">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="ID_REGIAO" id="2877DFB9-57D0-1C6B-67E0-3E0FDFAD1360">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="GENTILICO" id="47F5D59F-C073-1CB8-10E6-D3571B8FF520">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NOME_ESTADO" id="C773B5B4-DA5E-9EC2-27F7-201B76C01B7B">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SIGLA_ESTADO" id="CB267C67-BE6E-51A5-CEB1-0C967B875A73">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="PK_DIM_ESTADO" id="3A3A8558-BC50-6636-6A20-ECA0F443FBD3">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:16 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<schemaObject>5BC418C1-74CB-7FFB-17D5-FA20A8622766</schemaObject>
+<segment>EE402E88-BD42-DAAE-2F7E-7DFE45E6C615</segment>
+<tableSpace>22A91084-2DA2-CE6D-3B7E-604B736CD1DA</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_ESTADO_REGIAO" id="501FC3DA-4E22-4BFD-E460-B7E80E0B70D1">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:41 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PK_DIM_ESTADO" id="6192C373-5575-8C5B-9B07-1DCE2D86DB82">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:28 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<segment>EE402E88-BD42-DAAE-2F7E-7DFE45E6C615</segment>
+<tableSpace>22A91084-2DA2-CE6D-3B7E-604B736CD1DA</tableSpace>
+<existingIndex>3A3A8558-BC50-6636-6A20-ECA0F443FBD3</existingIndex>
+<indexSegment>EE402E88-BD42-DAAE-2F7E-7DFE45E6C615</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

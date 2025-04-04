@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="DIM_LOGRADOURO" directorySegmentName="seg_0" id="F62F4375-7E30-4DF9-B6C0-4FC29D1F4020">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:13 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<schemaObject>5BC418C1-74CB-7FFB-17D5-FA20A8622766</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>2AC7F04E-2D34-63EA-9D79-F14AF75975D4</segment>
+<tableSpace>22A91084-2DA2-CE6D-3B7E-604B736CD1DA</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="NR_CEP" id="1B6D779C-BF12-8127-6C50-DF3F5760D91B">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NOME_LOGRADOURO" id="3109E5F9-1D9B-C485-0B25-09DC57A6D00D">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NR_LOGRADOURO" id="7293F55B-5416-D49D-F026-6FE246B6692E">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_BAIRRO" id="7CD0EB51-9D2F-4D4B-1E6F-729F2A9E9089">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="FK_DIM_LOGRADOURO" id="87F790C6-EDBD-FAF4-98FC-130AA4369ECE">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="PK_DIM_LOGRADOURO" id="36D1045F-8FBB-7F77-3EAA-51BB25745704">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:16 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<schemaObject>5BC418C1-74CB-7FFB-17D5-FA20A8622766</schemaObject>
+<segment>EE402E88-BD42-DAAE-2F7E-7DFE45E6C615</segment>
+<tableSpace>22A91084-2DA2-CE6D-3B7E-604B736CD1DA</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_LOGRADOURO_BAIRRO" id="AF36C51E-F1C0-4826-0EBF-BDED2B18B587">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:41 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PK_DIM_LOGRADOURO" id="B2A4CEAE-5644-3FF1-9A48-F26E47870984">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:28 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<segment>EE402E88-BD42-DAAE-2F7E-7DFE45E6C615</segment>
+<tableSpace>22A91084-2DA2-CE6D-3B7E-604B736CD1DA</tableSpace>
+<existingIndex>36D1045F-8FBB-7F77-3EAA-51BB25745704</existingIndex>
+<indexSegment>EE402E88-BD42-DAAE-2F7E-7DFE45E6C615</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

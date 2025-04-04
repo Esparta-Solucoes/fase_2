@@ -1,0 +1,167 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="FATO_ENTREGA" directorySegmentName="seg_0" id="F8339144-8B7C-4691-51CA-802CDE421646">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:13 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<schemaObject>5BC418C1-74CB-7FFB-17D5-FA20A8622766</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>2AC7F04E-2D34-63EA-9D79-F14AF75975D4</segment>
+<tableSpace>22A91084-2DA2-CE6D-3B7E-604B736CD1DA</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="FK_FATO_ENTREGA_PEDIDO" id="04F030C9-E7D1-4339-4479-56B56620515C">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NOTA_EMBALAGEM" id="120B5B07-1F5C-0F78-1CBA-2A07B6C82953">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_DATA_PREVISTA" id="1245C7FB-464A-C988-FAF3-4844880B1857">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_PRODUTO" id="12B31336-ADB9-5C2D-7FC6-DD9456BD883B">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NOTA_CORTESIA" id="13A00D6D-42D5-B2C4-03D9-C0AC85653869">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_ENTREGADOR" id="2B39C691-D8D1-0900-DDF8-F07C35B1BFA7">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="FK_FATO_ENTREGA_ITEM" id="2CC8E1A9-F90D-105B-06BB-9521DB6CCAAA">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="QUANTIDADE" id="2F951338-63AA-6D7D-27B2-7CD58A27A120">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="VL_UNITARIO" id="4D82C8A5-9D96-F9E7-CD0D-CE6A4CB714F2">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TEMPO_ENTREGA_MIN" id="74936DFD-1888-73D8-93A3-C75422103590">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PERC_ICMS" id="7AC5430F-9D46-7E56-FBC5-BE187EE906C0">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_CENTRO_DIST" id="922988B0-2E66-C76C-C1E1-C82E3698886C">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="VL_TOTAL" id="9A066BCE-AED9-7DDE-9065-73B539237EFC">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="QT_PROD_ENTREGUE" id="A18B6CD0-5467-8979-94BE-7210CC1456E3">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_DATA_PEDIDO" id="CD63023F-6605-A79D-BCC2-D1A412CF6D92">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_CLIENTE" id="D49166AE-0F05-0A56-96DC-1ADC6307A835">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_DATA_ENTREGA" id="E47DD304-7C7E-F00C-B213-797B38225635">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NOTA_PONTUALIDADE" id="F42EBA6B-561C-AE8F-9F21-08F9F3A8E4B1">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="PK_FATO_ENTREGA" id="86B2E57B-1D25-0A48-907B-A16B1D31C921">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:16 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<schemaObject>5BC418C1-74CB-7FFB-17D5-FA20A8622766</schemaObject>
+<segment>EE402E88-BD42-DAAE-2F7E-7DFE45E6C615</segment>
+<tableSpace>22A91084-2DA2-CE6D-3B7E-604B736CD1DA</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_FATO_PRODUTO" id="12A3891F-0B5D-509A-ADEB-937C1F596A89">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:41 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_FATO_ENTREGADOR" id="5B41E17F-2813-2F8A-9358-02624618A14D">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:41 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_FATO_DATA_ENT" id="643CB901-988D-1651-AF50-BE4D3CAAED56">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:41 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_FATO_CENTRO" id="735BD496-7294-0600-50F7-1AF803C334EC">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:41 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_FATO_DATA_PREV" id="D4A1DA8F-1800-F582-413D-4F1097E82BAF">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:41 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_FATO_DATA_PED" id="F10A274D-2099-3826-B2B7-CC4915ABB2C1">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:41 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_FATO_CLIENTE" id="F3BD220C-E05C-7685-5E35-D2038AF602F7">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:41 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PK_FATO_ENTREGA" id="D08BFE6F-85B3-B07E-9E9A-A500B2BD6FF5">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:28 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<segment>EE402E88-BD42-DAAE-2F7E-7DFE45E6C615</segment>
+<tableSpace>22A91084-2DA2-CE6D-3B7E-604B736CD1DA</tableSpace>
+<existingIndex>86B2E57B-1D25-0A48-907B-A16B1D31C921</existingIndex>
+<indexSegment>EE402E88-BD42-DAAE-2F7E-7DFE45E6C615</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

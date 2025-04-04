@@ -1,0 +1,140 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F62F4375-7E30-4DF9-B6C0-4FC29D1F4020" schemaObject="5BC418C1-74CB-7FFB-17D5-FA20A8622766" name="DIM_LOGRADOURO">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>RM557311</sourceObjSchema>
+<sourceObjName>DIM_LOGRADOURO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:13 UTC</createdTime>
+<commentInRDBMS><![CDATA[Dimensão que armazena informações dos logradouros (rua, CEP, número etc.).]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<typeID>2</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="FK_DIM_LOGRADOURO" id="87F790C6-EDBD-FAF4-98FC-130AA4369ECE">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>DIM_LOGRADOURO</sourceObjSchema>
+<sourceObjName>FK_DIM_LOGRADOURO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Chave primária gerada por IDENTITY para a dimensão LOGRADOURO.]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<defaultOntNull>true</defaultOntNull>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementDisableCache>false</autoIncrementDisableCache>
+<autoIncrementCache>20</autoIncrementCache>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="NOME_LOGRADOURO" id="3109E5F9-1D9B-C485-0B25-09DC57A6D00D">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>DIM_LOGRADOURO</sourceObjSchema>
+<sourceObjName>NOME_LOGRADOURO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nome da rua/avenida/travessa, etc. (ex.: Av. Paulista).]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NR_LOGRADOURO" id="7293F55B-5416-D49D-F026-6FE246B6692E">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>DIM_LOGRADOURO</sourceObjSchema>
+<sourceObjName>NR_LOGRADOURO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Número do endereço do logradouro (ex.: 100, 123B, S/N).]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NR_CEP" id="1B6D779C-BF12-8127-6C50-DF3F5760D91B">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>DIM_LOGRADOURO</sourceObjSchema>
+<sourceObjName>NR_CEP</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[CEP (Código de Endereçamento Postal).]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 BYTE</dataTypeSize>
+<ownDataTypeParameters>15 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_BAIRRO" id="7CD0EB51-9D2F-4D4B-1E6F-729F2A9E9089">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>DIM_LOGRADOURO</sourceObjSchema>
+<sourceObjName>ID_BAIRRO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Chave estrangeira para DIM_BAIRRO, indicando o bairro ao qual este logradouro pertence.]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="94DFB244-C57D-69CB-6F05-347F19D971E6" referredColumn="36FBD8A7-2B30-F2FF-6719-73F6074254C5"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B2A4CEAE-5644-3FF1-9A48-F26E47870984" name="PK_DIM_LOGRADOURO">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>RM557311</sourceObjSchema>
+<sourceObjName>PK_DIM_LOGRADOURO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:28 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="87F790C6-EDBD-FAF4-98FC-130AA4369ECE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="36D1045F-8FBB-7F77-3EAA-51BB25745704" schemaObject="5BC418C1-74CB-7FFB-17D5-FA20A8622766" name="PK_DIM_LOGRADOURO">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>RM557311</sourceObjSchema>
+<sourceObjName>PK_DIM_LOGRADOURO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:16 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="87F790C6-EDBD-FAF4-98FC-130AA4369ECE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AF36C51E-F1C0-4826-0EBF-BDED2B18B587" name="FK_LOGRADOURO_BAIRRO">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:41 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7CD0EB51-9D2F-4D4B-1E6F-729F2A9E9089"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

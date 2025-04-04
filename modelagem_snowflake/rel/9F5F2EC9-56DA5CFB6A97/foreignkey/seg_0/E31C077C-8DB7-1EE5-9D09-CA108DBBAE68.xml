@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="E31C077C-8DB7-1EE5-9D09-CA108DBBAE68" containerWithKeyObject="547B7922-E68B-E05F-D97D-3CF50E41C169" localFKIndex="1F50402E-98CD-0EF7-6DEE-4C6A68F841A4" name="FK_BAIRRO_CIDADE">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>RM557311</sourceObjSchema>
+<sourceObjName>FK_BAIRRO_CIDADE</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:41 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<referredTableLongName>RM557311.DIM_CIDADE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>1F91FC22-33F4-01B1-51E9-A879183A747A</referredTableID>
+<keyObject>52FC6230-999D-8AF2-E1E0-34FB2FC62B9E</keyObject>
+<referredKeyID>52FC6230-999D-8AF2-E1E0-34FB2FC62B9E</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>FK_DIM_CIDADE</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

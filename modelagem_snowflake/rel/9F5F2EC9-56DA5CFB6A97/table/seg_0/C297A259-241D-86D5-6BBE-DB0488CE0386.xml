@@ -1,0 +1,138 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C297A259-241D-86D5-6BBE-DB0488CE0386" schemaObject="5BC418C1-74CB-7FFB-17D5-FA20A8622766" name="DIM_ESTADO">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>RM557311</sourceObjSchema>
+<sourceObjName>DIM_ESTADO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:13 UTC</createdTime>
+<commentInRDBMS><![CDATA[Dimensão que armazena dados dos Estados (UF), referenciando a região a que pertence.]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<typeID>2</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="FK_DIM_ESTADO" id="25C75389-1427-3207-9973-D16098C24C2F">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>DIM_ESTADO</sourceObjSchema>
+<sourceObjName>FK_DIM_ESTADO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Chave primária gerada por IDENTITY para a dimensão ESTADO.]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<defaultOntNull>true</defaultOntNull>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementDisableCache>false</autoIncrementDisableCache>
+<autoIncrementCache>20</autoIncrementCache>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="SIGLA_ESTADO" id="CB267C67-BE6E-51A5-CEB1-0C967B875A73">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>DIM_ESTADO</sourceObjSchema>
+<sourceObjName>SIGLA_ESTADO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Sigla da unidade federativa (por exemplo, SP, RJ).]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2 BYTE</dataTypeSize>
+<ownDataTypeParameters>2 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME_ESTADO" id="C773B5B4-DA5E-9EC2-27F7-201B76C01B7B">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>DIM_ESTADO</sourceObjSchema>
+<sourceObjName>NOME_ESTADO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nome por extenso do Estado (por exemplo, São Paulo, Rio de Janeiro).]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="GENTILICO" id="47F5D59F-C073-1CB8-10E6-D3571B8FF520">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>DIM_ESTADO</sourceObjSchema>
+<sourceObjName>GENTILICO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Termo que se refere aos habitantes do estado (ex.: paulista, carioca).]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_REGIAO" id="2877DFB9-57D0-1C6B-67E0-3E0FDFAD1360">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>DIM_ESTADO</sourceObjSchema>
+<sourceObjName>ID_REGIAO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Chave estrangeira para DIM_REGIAO, indicando a região a que o Estado pertence.]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8C99FA82-B776-F85B-F59B-ABED0914D746" referredColumn="5210C59F-A021-D5B5-2D0B-621B402C2F45"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6192C373-5575-8C5B-9B07-1DCE2D86DB82" name="PK_DIM_ESTADO">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>RM557311</sourceObjSchema>
+<sourceObjName>PK_DIM_ESTADO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:28 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="25C75389-1427-3207-9973-D16098C24C2F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3A3A8558-BC50-6636-6A20-ECA0F443FBD3" schemaObject="5BC418C1-74CB-7FFB-17D5-FA20A8622766" name="PK_DIM_ESTADO">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>RM557311</sourceObjSchema>
+<sourceObjName>PK_DIM_ESTADO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:16 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="25C75389-1427-3207-9973-D16098C24C2F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="501FC3DA-4E22-4BFD-E460-B7E80E0B70D1" name="FK_ESTADO_REGIAO">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:41 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2877DFB9-57D0-1C6B-67E0-3E0FDFAD1360"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

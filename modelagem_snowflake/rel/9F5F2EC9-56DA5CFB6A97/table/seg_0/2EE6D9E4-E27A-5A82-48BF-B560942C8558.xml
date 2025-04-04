@@ -1,0 +1,80 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2EE6D9E4-E27A-5A82-48BF-B560942C8558" schemaObject="5BC418C1-74CB-7FFB-17D5-FA20A8622766" name="DIM_REGIAO">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>RM557311</sourceObjSchema>
+<sourceObjName>DIM_REGIAO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:13 UTC</createdTime>
+<commentInRDBMS><![CDATA[Dimensão que armazena informações de macrorregiões (Norte, Nordeste, Centro-Oeste, Sudeste, Sul).]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<typeID>2</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="FK_DIM_REGIAO" id="5210C59F-A021-D5B5-2D0B-621B402C2F45">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>DIM_REGIAO</sourceObjSchema>
+<sourceObjName>FK_DIM_REGIAO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Chave primária gerada por IDENTITY para a dimensão REGIAO.]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<defaultOntNull>true</defaultOntNull>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementDisableCache>false</autoIncrementDisableCache>
+<autoIncrementCache>20</autoIncrementCache>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="NOME_REGIAO" id="179FF083-0CC8-2C83-2A5E-F4E8E8CB9561">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>DIM_REGIAO</sourceObjSchema>
+<sourceObjName>NOME_REGIAO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nome da região geográfica (Norte, Nordeste, etc.).]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="79801069-D7FD-3C55-F14D-B9E619C4BD52" name="PK_DIM_REGIAO">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>RM557311</sourceObjSchema>
+<sourceObjName>PK_DIM_REGIAO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:28 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5210C59F-A021-D5B5-2D0B-621B402C2F45"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B2D2BCB0-58AB-CBBE-8C60-72ECAD54F184" schemaObject="5BC418C1-74CB-7FFB-17D5-FA20A8622766" name="PK_DIM_REGIAO">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>RM557311</sourceObjSchema>
+<sourceObjName>PK_DIM_REGIAO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:16 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5210C59F-A021-D5B5-2D0B-621B402C2F45"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

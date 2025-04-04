@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="76D8557C-2060-F00F-C335-F303D15B71A1" containerWithKeyObject="F8339144-8B7C-4691-51CA-802CDE421646" localFKIndex="5B41E17F-2813-2F8A-9358-02624618A14D" name="FK_FATO_ENTREGADOR">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>RM557311</sourceObjSchema>
+<sourceObjName>FK_FATO_ENTREGADOR</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:41 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<referredTableLongName>RM557311.DIM_ENTREGADOR</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>0C803154-1425-0D31-5337-84F22CBC8285</referredTableID>
+<keyObject>6DC5A0A5-D7AE-C157-724F-C835A9455EAD</keyObject>
+<referredKeyID>6DC5A0A5-D7AE-C157-724F-C835A9455EAD</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>FK_DIM_ENTREGADOR</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

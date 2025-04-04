@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="DIM_BAIRRO" directorySegmentName="seg_0" id="547B7922-E68B-E05F-D97D-3CF50E41C169">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:13 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<schemaObject>5BC418C1-74CB-7FFB-17D5-FA20A8622766</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>2AC7F04E-2D34-63EA-9D79-F14AF75975D4</segment>
+<tableSpace>22A91084-2DA2-CE6D-3B7E-604B736CD1DA</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="FK_DIM_BAIRRO" id="36FBD8A7-2B30-F2FF-6719-73F6074254C5">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="NR_NIVEL_SEGURANCA" id="51C7BB3F-D261-101E-3A93-630CAA721359">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NR_POPULACAO_BAIRRO" id="5C3DCEA0-70C2-B720-4F41-8D7D2748137D">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_CIDADE" id="5D8F71EE-95C7-CA62-FE3B-B6CB8EFAF4F0">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NOME_BAIRRO" id="6B402993-9939-38E0-EC37-3779B0440C74">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="PK_DIM_BAIRRO" id="1DC09E25-FE90-0D83-F0DC-3867F75F30CF">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:16 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<schemaObject>5BC418C1-74CB-7FFB-17D5-FA20A8622766</schemaObject>
+<segment>EE402E88-BD42-DAAE-2F7E-7DFE45E6C615</segment>
+<tableSpace>22A91084-2DA2-CE6D-3B7E-604B736CD1DA</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_BAIRRO_CIDADE" id="1F50402E-98CD-0EF7-6DEE-4C6A68F841A4">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:41 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PK_DIM_BAIRRO" id="5E6EF195-D5F4-3069-2918-12ECCBCDFBA8">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:28 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<segment>EE402E88-BD42-DAAE-2F7E-7DFE45E6C615</segment>
+<tableSpace>22A91084-2DA2-CE6D-3B7E-604B736CD1DA</tableSpace>
+<existingIndex>1DC09E25-FE90-0D83-F0DC-3867F75F30CF</existingIndex>
+<indexSegment>EE402E88-BD42-DAAE-2F7E-7DFE45E6C615</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

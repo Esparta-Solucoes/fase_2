@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="90D7E725-9B13-E131-6F6D-3E8F4E6461A2" containerWithKeyObject="F8339144-8B7C-4691-51CA-802CDE421646" localFKIndex="735BD496-7294-0600-50F7-1AF803C334EC" name="FK_FATO_CENTRO">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>RM557311</sourceObjSchema>
+<sourceObjName>FK_FATO_CENTRO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:41 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<referredTableLongName>RM557311.DIM_CENTRO_DISTRIBUICAO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>0D74ACF2-ADAA-6BDE-A372-B004F0647379</referredTableID>
+<keyObject>A5B3E84C-8A22-05CD-B8E1-9872A1C8D560</keyObject>
+<referredKeyID>A5B3E84C-8A22-05CD-B8E1-9872A1C8D560</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>FK_DIM_CENTRO_DISTRIBUICAO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

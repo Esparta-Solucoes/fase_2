@@ -1,0 +1,121 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0D74ACF2-ADAA-6BDE-A372-B004F0647379" schemaObject="5BC418C1-74CB-7FFB-17D5-FA20A8622766" name="DIM_CENTRO_DISTRIBUICAO">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>RM557311</sourceObjSchema>
+<sourceObjName>DIM_CENTRO_DISTRIBUICAO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:13 UTC</createdTime>
+<commentInRDBMS><![CDATA[Dimensão que armazena dados de cada Centro de Distribuição (CD), incluindo endereço via DIM_LOGRADOURO.]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<typeID>2</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="FK_DIM_CENTRO_DISTRIBUICAO" id="31CD05A8-CD6F-80AA-7D60-6DBA9D563888">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>DIM_CENTRO_DISTRIBUICAO</sourceObjSchema>
+<sourceObjName>FK_DIM_CENTRO_DISTRIBUICAO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Chave primária gerada por IDENTITY para a dimensão CENTRO DE DISTRIBUIÇÃO.]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<defaultOntNull>true</defaultOntNull>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementDisableCache>false</autoIncrementDisableCache>
+<autoIncrementCache>20</autoIncrementCache>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="CD_CD" id="7B29D49B-E1C5-9333-0BFF-C4985492ACF5">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>DIM_CENTRO_DISTRIBUICAO</sourceObjSchema>
+<sourceObjName>CD_CD</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Código identificador do Centro de Distribuição no sistema (CD).]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME_CENTRO_DISTRIBUICAO" id="CCA3FBED-D10A-C7E0-AD17-3BDB19A306AE">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>DIM_CENTRO_DISTRIBUICAO</sourceObjSchema>
+<sourceObjName>NOME_CENTRO_DISTRIBUICAO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nome do Centro de Distribuição (ex.: CD Norte, CD SP-1).]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_LOGRADOURO" id="60876E59-4475-34C3-92CF-34A87ED5D5F4">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>DIM_CENTRO_DISTRIBUICAO</sourceObjSchema>
+<sourceObjName>ID_LOGRADOURO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Chave estrangeira para DIM_LOGRADOURO, indicando o endereço do CD.]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="64BC4B72-AE71-8ED1-2C5E-D425AAEBDFD2" referredColumn="87F790C6-EDBD-FAF4-98FC-130AA4369ECE"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A5B3E84C-8A22-05CD-B8E1-9872A1C8D560" name="PK_DIM_CENTRODIST">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>RM557311</sourceObjSchema>
+<sourceObjName>PK_DIM_CENTRODIST</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:28 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="31CD05A8-CD6F-80AA-7D60-6DBA9D563888"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="109ADBF2-46CD-BE59-8C57-AFF3D839791B" schemaObject="5BC418C1-74CB-7FFB-17D5-FA20A8622766" name="PK_DIM_CENTRODIST">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>RM557311</sourceObjSchema>
+<sourceObjName>PK_DIM_CENTRODIST</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:16 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="31CD05A8-CD6F-80AA-7D60-6DBA9D563888"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5EAD2283-6421-84AF-D7B7-EC860F01F66D" name="FK_CENTRODIST_LOGRADOURO">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:41 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="60876E59-4475-34C3-92CF-34A87ED5D5F4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

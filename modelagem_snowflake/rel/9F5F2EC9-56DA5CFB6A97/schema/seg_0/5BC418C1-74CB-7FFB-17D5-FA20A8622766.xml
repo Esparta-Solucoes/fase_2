@@ -1,0 +1,6 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SchemaObject class="oracle.dbtools.crest.model.design.relational.SchemaObject" name="RM557311" directorySegmentName="seg_0" id="5BC418C1-74CB-7FFB-17D5-FA20A8622766">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:13 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</SchemaObject>

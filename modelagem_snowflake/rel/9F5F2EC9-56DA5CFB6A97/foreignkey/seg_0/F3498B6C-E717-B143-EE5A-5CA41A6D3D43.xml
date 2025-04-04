@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="F3498B6C-E717-B143-EE5A-5CA41A6D3D43" containerWithKeyObject="F8339144-8B7C-4691-51CA-802CDE421646" localFKIndex="F3BD220C-E05C-7685-5E35-D2038AF602F7" name="FK_FATO_CLIENTE">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>RM557311</sourceObjSchema>
+<sourceObjName>FK_FATO_CLIENTE</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:41 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<referredTableLongName>RM557311.DIM_CLIENTE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>09ADE77E-5009-24B0-EE32-BFB12F31C794</referredTableID>
+<keyObject>9BCA756A-67A4-214A-E62F-30A222A75443</keyObject>
+<referredKeyID>9BCA756A-67A4-214A-E62F-30A222A75443</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>FK_DIM_CLIENTE</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

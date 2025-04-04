@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="DIM_DATA" directorySegmentName="seg_0" id="5CB8F28A-9DE4-6036-7FE5-2221B51F2602">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:13 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<schemaObject>5BC418C1-74CB-7FFB-17D5-FA20A8622766</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>2AC7F04E-2D34-63EA-9D79-F14AF75975D4</segment>
+<tableSpace>22A91084-2DA2-CE6D-3B7E-604B736CD1DA</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="DIA" id="1763D329-4307-CA68-2D93-8652630F017D">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NOME_MES" id="317D17C3-D865-3AE3-D5B2-3068D47989B6">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NOME_DIA_SEMANA" id="3D083720-F259-DD52-23C0-7011A828AED7">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="FK_DIM_DATA" id="64F10A2A-3941-982F-2144-22E43D7C9AC4">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="DATA_COMPLETA" id="BC13BB12-2B89-6CE8-5026-CA28CB6EA994">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ANO" id="D0871125-FBB3-7FFB-C750-439AFA008F83">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MES" id="EF858384-59B2-91CA-4BCB-06B18CB4B1B1">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="PK_DIM_DATA" id="A0D2DAF2-5844-F8B9-9053-F29F564CF43C">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:16 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<schemaObject>5BC418C1-74CB-7FFB-17D5-FA20A8622766</schemaObject>
+<segment>EE402E88-BD42-DAAE-2F7E-7DFE45E6C615</segment>
+<tableSpace>22A91084-2DA2-CE6D-3B7E-604B736CD1DA</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PK_DIM_DATA" id="F786F120-894B-E894-5F56-315CB35E0EEB">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:28 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<segment>EE402E88-BD42-DAAE-2F7E-7DFE45E6C615</segment>
+<tableSpace>22A91084-2DA2-CE6D-3B7E-604B736CD1DA</tableSpace>
+<existingIndex>A0D2DAF2-5844-F8B9-9053-F29F564CF43C</existingIndex>
+<indexSegment>EE402E88-BD42-DAAE-2F7E-7DFE45E6C615</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

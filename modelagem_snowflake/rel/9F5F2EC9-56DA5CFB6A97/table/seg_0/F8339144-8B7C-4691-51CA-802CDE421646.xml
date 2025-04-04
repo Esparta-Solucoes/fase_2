@@ -1,0 +1,420 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F8339144-8B7C-4691-51CA-802CDE421646" schemaObject="5BC418C1-74CB-7FFB-17D5-FA20A8622766" name="FATO_ENTREGA">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>RM557311</sourceObjSchema>
+<sourceObjName>FATO_ENTREGA</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:13 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tabela Fato (grão: Pedido + Item). Armazena medições de entrega, ligando-se às dimensões Cliente, Produto, CD, Entregador e Datas.]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<typeID>1</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="FK_FATO_ENTREGA_PEDIDO" id="04F030C9-E7D1-4339-4479-56B56620515C">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>FATO_ENTREGA</sourceObjSchema>
+<sourceObjName>FK_FATO_ENTREGA_PEDIDO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Número do pedido (código natural do sistema transacional). Parte 1 da PK.]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FK_FATO_ENTREGA_ITEM" id="2CC8E1A9-F90D-105B-06BB-9521DB6CCAAA">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>FATO_ENTREGA</sourceObjSchema>
+<sourceObjName>FK_FATO_ENTREGA_ITEM</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Número sequencial do item dentro do pedido. Parte 2 da PK.]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_CLIENTE" id="D49166AE-0F05-0A56-96DC-1ADC6307A835">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>FATO_ENTREGA</sourceObjSchema>
+<sourceObjName>ID_CLIENTE</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[FK para DIM_CLIENTE (quem recebe o produto).]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F3498B6C-E717-B143-EE5A-5CA41A6D3D43" referredColumn="53E38D28-D8F3-E888-55C4-3F6D62BE2102"/>
+</associations>
+</Column>
+<Column name="ID_PRODUTO" id="12B31336-ADB9-5C2D-7FC6-DD9456BD883B">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>FATO_ENTREGA</sourceObjSchema>
+<sourceObjName>ID_PRODUTO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[FK para DIM_PRODUTO (qual produto foi comprado).]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="43DC224A-6085-B856-1C80-FE34869C63CB" referredColumn="40423750-C8F6-79FB-1144-EAAC7983B660"/>
+</associations>
+</Column>
+<Column name="ID_CENTRO_DIST" id="922988B0-2E66-C76C-C1E1-C82E3698886C">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>FATO_ENTREGA</sourceObjSchema>
+<sourceObjName>ID_CENTRO_DIST</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[FK para DIM_CENTRO_DISTRIBUICAO (qual CD despachou o produto).]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="90D7E725-9B13-E131-6F6D-3E8F4E6461A2" referredColumn="31CD05A8-CD6F-80AA-7D60-6DBA9D563888"/>
+</associations>
+</Column>
+<Column name="ID_ENTREGADOR" id="2B39C691-D8D1-0900-DDF8-F07C35B1BFA7">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>FATO_ENTREGA</sourceObjSchema>
+<sourceObjName>ID_ENTREGADOR</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[FK para DIM_ENTREGADOR (profissional que realizou a entrega).]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="76D8557C-2060-F00F-C335-F303D15B71A1" referredColumn="6FDBE684-47C6-EE40-3C02-FC031F444C2F"/>
+</associations>
+</Column>
+<Column name="ID_DATA_PEDIDO" id="CD63023F-6605-A79D-BCC2-D1A412CF6D92">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>FATO_ENTREGA</sourceObjSchema>
+<sourceObjName>ID_DATA_PEDIDO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[FK para DIM_DATA, indicando a data/hora em que o pedido foi criado.]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2FBDBE26-0BC1-8B4D-609C-120519309385" referredColumn="64F10A2A-3941-982F-2144-22E43D7C9AC4"/>
+</associations>
+</Column>
+<Column name="ID_DATA_PREVISTA" id="1245C7FB-464A-C988-FAF3-4844880B1857">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>FATO_ENTREGA</sourceObjSchema>
+<sourceObjName>ID_DATA_PREVISTA</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[FK para DIM_DATA, indicando a data/hora prevista de entrega ao cliente.]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="49EC3CFE-B4A5-4E75-605F-44D160DDC3E7" referredColumn="64F10A2A-3941-982F-2144-22E43D7C9AC4"/>
+</associations>
+</Column>
+<Column name="ID_DATA_ENTREGA" id="E47DD304-7C7E-F00C-B213-797B38225635">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>FATO_ENTREGA</sourceObjSchema>
+<sourceObjName>ID_DATA_ENTREGA</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[FK para DIM_DATA, indicando a data/hora real de entrega ao cliente.]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="123FF987-1973-4295-DCCB-019C09C99189" referredColumn="64F10A2A-3941-982F-2144-22E43D7C9AC4"/>
+</associations>
+</Column>
+<Column name="QUANTIDADE" id="2F951338-63AA-6D7D-27B2-7CD58A27A120">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>FATO_ENTREGA</sourceObjSchema>
+<sourceObjName>QUANTIDADE</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Quantidade de itens solicitados no pedido.]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="QT_PROD_ENTREGUE" id="A18B6CD0-5467-8979-94BE-7210CC1456E3">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>FATO_ENTREGA</sourceObjSchema>
+<sourceObjName>QT_PROD_ENTREGUE</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Quantidade efetiva de itens que foram entregues (pode variar da quantidade pedida).]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VL_UNITARIO" id="4D82C8A5-9D96-F9E7-CD0D-CE6A4CB714F2">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>FATO_ENTREGA</sourceObjSchema>
+<sourceObjName>VL_UNITARIO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Valor unitário do item no momento da compra.]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>12</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,12,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VL_TOTAL" id="9A066BCE-AED9-7DDE-9065-73B539237EFC">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>FATO_ENTREGA</sourceObjSchema>
+<sourceObjName>VL_TOTAL</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Valor total da linha, normalmente QUANTIDADE x VL_UNITARIO.]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>12</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,12,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PERC_ICMS" id="7AC5430F-9D46-7E56-FBC5-BE187EE906C0">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>FATO_ENTREGA</sourceObjSchema>
+<sourceObjName>PERC_ICMS</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Percentual de ICMS aplicado ao produto neste pedido.]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,5,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOTA_EMBALAGEM" id="120B5B07-1F5C-0F78-1CBA-2A07B6C82953">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>FATO_ENTREGA</sourceObjSchema>
+<sourceObjName>NOTA_EMBALAGEM</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Avaliação (0 a 10) do cliente quanto à embalagem do produto.]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,2,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOTA_PONTUALIDADE" id="F42EBA6B-561C-AE8F-9F21-08F9F3A8E4B1">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>FATO_ENTREGA</sourceObjSchema>
+<sourceObjName>NOTA_PONTUALIDADE</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Avaliação (0 a 10) do cliente quanto à pontualidade (cumprimento do prazo).]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,2,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOTA_CORTESIA" id="13A00D6D-42D5-B2C4-03D9-C0AC85653869">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>FATO_ENTREGA</sourceObjSchema>
+<sourceObjName>NOTA_CORTESIA</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Avaliação (0 a 10) do cliente quanto à cordialidade do entregador.]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,2,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TEMPO_ENTREGA_MIN" id="74936DFD-1888-73D8-93A3-C75422103590">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>FATO_ENTREGA</sourceObjSchema>
+<sourceObjName>TEMPO_ENTREGA_MIN</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tempo total de entrega em minutos, calculado entre pedido e entrega real.]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D08BFE6F-85B3-B07E-9E9A-A500B2BD6FF5" name="PK_FATO_ENTREGA">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>RM557311</sourceObjSchema>
+<sourceObjName>PK_FATO_ENTREGA</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:28 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="04F030C9-E7D1-4339-4479-56B56620515C"/>
+<colUsage columnID="2CC8E1A9-F90D-105B-06BB-9521DB6CCAAA"/>
+<colUsage columnID="D49166AE-0F05-0A56-96DC-1ADC6307A835"/>
+<colUsage columnID="12B31336-ADB9-5C2D-7FC6-DD9456BD883B"/>
+<colUsage columnID="922988B0-2E66-C76C-C1E1-C82E3698886C"/>
+<colUsage columnID="2B39C691-D8D1-0900-DDF8-F07C35B1BFA7"/>
+<colUsage columnID="CD63023F-6605-A79D-BCC2-D1A412CF6D92"/>
+<colUsage columnID="1245C7FB-464A-C988-FAF3-4844880B1857"/>
+<colUsage columnID="E47DD304-7C7E-F00C-B213-797B38225635"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="86B2E57B-1D25-0A48-907B-A16B1D31C921" schemaObject="5BC418C1-74CB-7FFB-17D5-FA20A8622766" name="PK_FATO_ENTREGA">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>RM557311</sourceObjSchema>
+<sourceObjName>PK_FATO_ENTREGA</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:16 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="04F030C9-E7D1-4339-4479-56B56620515C"/>
+<colUsage columnID="2CC8E1A9-F90D-105B-06BB-9521DB6CCAAA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="735BD496-7294-0600-50F7-1AF803C334EC" name="FK_FATO_CENTRO">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:41 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="922988B0-2E66-C76C-C1E1-C82E3698886C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F3BD220C-E05C-7685-5E35-D2038AF602F7" name="FK_FATO_CLIENTE">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:41 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D49166AE-0F05-0A56-96DC-1ADC6307A835"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="643CB901-988D-1651-AF50-BE4D3CAAED56" name="FK_FATO_DATA_ENT">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:41 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E47DD304-7C7E-F00C-B213-797B38225635"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F10A274D-2099-3826-B2B7-CC4915ABB2C1" name="FK_FATO_DATA_PED">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:41 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CD63023F-6605-A79D-BCC2-D1A412CF6D92"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D4A1DA8F-1800-F582-413D-4F1097E82BAF" name="FK_FATO_DATA_PREV">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:41 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1245C7FB-464A-C988-FAF3-4844880B1857"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5B41E17F-2813-2F8A-9358-02624618A14D" name="FK_FATO_ENTREGADOR">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:41 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2B39C691-D8D1-0900-DDF8-F07C35B1BFA7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="12A3891F-0B5D-509A-ADEB-937C1F596A89" name="FK_FATO_PRODUTO">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:41 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="12B31336-ADB9-5C2D-7FC6-DD9456BD883B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

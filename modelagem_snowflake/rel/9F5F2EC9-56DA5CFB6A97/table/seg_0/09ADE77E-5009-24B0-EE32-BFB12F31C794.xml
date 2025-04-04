@@ -1,0 +1,170 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="09ADE77E-5009-24B0-EE32-BFB12F31C794" schemaObject="5BC418C1-74CB-7FFB-17D5-FA20A8622766" name="DIM_CLIENTE">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>RM557311</sourceObjSchema>
+<sourceObjName>DIM_CLIENTE</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Dimensão que armazena dados do cliente, vinculando o endereço via DIM_LOGRADOURO.]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<typeID>2</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="FK_DIM_CLIENTE" id="53E38D28-D8F3-E888-55C4-3F6D62BE2102">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>DIM_CLIENTE</sourceObjSchema>
+<sourceObjName>FK_DIM_CLIENTE</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Chave primária gerada por IDENTITY para a dimensão CLIENTE.]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<defaultOntNull>true</defaultOntNull>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementDisableCache>false</autoIncrementDisableCache>
+<autoIncrementCache>20</autoIncrementCache>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="NR_CLIENTE" id="052D86CD-34A6-1F0B-61BC-DB290C265A37">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>DIM_CLIENTE</sourceObjSchema>
+<sourceObjName>NR_CLIENTE</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Código de identificação do cliente no e-commerce.]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME_CLIENTE" id="E53DB31B-51CC-4E79-5A7C-2612428B04BE">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>DIM_CLIENTE</sourceObjSchema>
+<sourceObjName>NOME_CLIENTE</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nome completo do cliente.]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NR_ESTRELAS" id="150B04BB-B574-BB8D-5A2C-C066355BD93E">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>DIM_CLIENTE</sourceObjSchema>
+<sourceObjName>NR_ESTRELAS</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nível de fidelidade ou pontuação do cliente (ex.: 3 estrelas de 5).]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,1,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ST_CLIENTE" id="B1F4D0C8-BD54-52B3-D3AB-EB391E741C70">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>DIM_CLIENTE</sourceObjSchema>
+<sourceObjName>ST_CLIENTE</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Status do cliente (A=Ativo, I=Inativo).]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DT_NASCIMENTO" id="C65F4FF7-4BB4-4F86-8D4E-F6C0E76AF06C">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>DIM_CLIENTE</sourceObjSchema>
+<sourceObjName>DT_NASCIMENTO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Data de nascimento do cliente (se disponível).]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_LOGRADOURO" id="7B56CECD-49E8-7271-7DC7-7C8C3D6DA73F">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>DIM_CLIENTE</sourceObjSchema>
+<sourceObjName>ID_LOGRADOURO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Chave estrangeira para DIM_LOGRADOURO, indicando o endereço do cliente.]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3BCA3055-5B52-23BE-5197-6737D0347D9E" referredColumn="87F790C6-EDBD-FAF4-98FC-130AA4369ECE"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9BCA756A-67A4-214A-E62F-30A222A75443" name="PK_DIM_CLIENTE">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>RM557311</sourceObjSchema>
+<sourceObjName>PK_DIM_CLIENTE</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:28 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="53E38D28-D8F3-E888-55C4-3F6D62BE2102"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B6415CC5-CBF2-75CC-1CB8-C3B8C0A3F880" schemaObject="5BC418C1-74CB-7FFB-17D5-FA20A8622766" name="PK_DIM_CLIENTE">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>RM557311</sourceObjSchema>
+<sourceObjName>PK_DIM_CLIENTE</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:16 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="53E38D28-D8F3-E888-55C4-3F6D62BE2102"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="37CEDF17-61E2-3C35-EE41-D8CE602E1FA5" name="FK_CLIENTE_LOGRADOURO">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:41 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7B56CECD-49E8-7271-7DC7-7C8C3D6DA73F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

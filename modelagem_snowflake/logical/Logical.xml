@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="6147A072-DC49-3B22-2B4F-D81D1CA6244F" mainViewID="DAE7D6F4-C0FB-AFA2-F2B2-5F4381A16FE2">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:47:58 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

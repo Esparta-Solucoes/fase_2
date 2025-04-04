@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="64BC4B72-AE71-8ED1-2C5E-D425AAEBDFD2" containerWithKeyObject="0D74ACF2-ADAA-6BDE-A372-B004F0647379" localFKIndex="5EAD2283-6421-84AF-D7B7-EC860F01F66D" name="FK_CENTRODIST_LOGRADOURO">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>RM557311</sourceObjSchema>
+<sourceObjName>FK_CENTRODIST_LOGRADOURO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:41 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<referredTableLongName>RM557311.DIM_LOGRADOURO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>F62F4375-7E30-4DF9-B6C0-4FC29D1F4020</referredTableID>
+<keyObject>B2A4CEAE-5644-3FF1-9A48-F26E47870984</keyObject>
+<referredKeyID>B2A4CEAE-5644-3FF1-9A48-F26E47870984</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>FK_DIM_LOGRADOURO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

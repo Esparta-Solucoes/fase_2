@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="94DFB244-C57D-69CB-6F05-347F19D971E6" containerWithKeyObject="F62F4375-7E30-4DF9-B6C0-4FC29D1F4020" localFKIndex="AF36C51E-F1C0-4826-0EBF-BDED2B18B587" name="FK_LOGRADOURO_BAIRRO">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>RM557311</sourceObjSchema>
+<sourceObjName>FK_LOGRADOURO_BAIRRO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:41 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<referredTableLongName>RM557311.DIM_BAIRRO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>547B7922-E68B-E05F-D97D-3CF50E41C169</referredTableID>
+<keyObject>5E6EF195-D5F4-3069-2918-12ECCBCDFBA8</keyObject>
+<referredKeyID>5E6EF195-D5F4-3069-2918-12ECCBCDFBA8</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>FK_DIM_BAIRRO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="8C99FA82-B776-F85B-F59B-ABED0914D746" containerWithKeyObject="C297A259-241D-86D5-6BBE-DB0488CE0386" localFKIndex="501FC3DA-4E22-4BFD-E460-B7E80E0B70D1" name="FK_ESTADO_REGIAO">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>RM557311</sourceObjSchema>
+<sourceObjName>FK_ESTADO_REGIAO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:41 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<referredTableLongName>RM557311.DIM_REGIAO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>2EE6D9E4-E27A-5A82-48BF-B560942C8558</referredTableID>
+<keyObject>79801069-D7FD-3C55-F14D-B9E619C4BD52</keyObject>
+<referredKeyID>79801069-D7FD-3C55-F14D-B9E619C4BD52</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>FK_DIM_REGIAO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,139 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="40F8EC2C-628B-1775-AB29-014B083D1481" schemaObject="5BC418C1-74CB-7FFB-17D5-FA20A8622766" name="DIM_SUBCATEGORIA">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>RM557311</sourceObjSchema>
+<sourceObjName>DIM_SUBCATEGORIA</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:13 UTC</createdTime>
+<commentInRDBMS><![CDATA[Dimensão que armazena as subcategorias de produtos, vinculadas a uma categoria maior.]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<typeID>2</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="FK_DIM_SUBCATEGORIA" id="29F36327-D0F1-3661-74F0-E51D765FF1BD">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>DIM_SUBCATEGORIA</sourceObjSchema>
+<sourceObjName>FK_DIM_SUBCATEGORIA</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Chave primária gerada por IDENTITY para a dimensão SUBCATEGORIA.]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<defaultOntNull>true</defaultOntNull>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementDisableCache>false</autoIncrementDisableCache>
+<autoIncrementCache>20</autoIncrementCache>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="NOME_SUBCATEGORIA" id="94173610-8A9F-7EF9-D3E2-6C31620E7118">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>DIM_SUBCATEGORIA</sourceObjSchema>
+<sourceObjName>NOME_SUBCATEGORIA</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nome da subcategoria (ex.: Smartphones, Geladeiras).]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ST_SUB_CATEGORIA" id="61A13D65-F489-0558-A912-9169D6EEDA77">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>DIM_SUBCATEGORIA</sourceObjSchema>
+<sourceObjName>ST_SUB_CATEGORIA</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Status da subcategoria (A=Ativa, I=Inativa).]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NR_AVALIACAO_SUB_CATEGORIA" id="967FB434-2D1D-D815-DFFA-FA6AAD78A543">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>DIM_SUBCATEGORIA</sourceObjSchema>
+<sourceObjName>NR_AVALIACAO_SUB_CATEGORIA</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nota de avaliação média da subcategoria.]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<dataTypeScale>1</dataTypeScale>
+<ownDataTypeParameters>,3,1</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_CATEGORIA" id="1DD7FB49-83BC-9001-B48E-C520952D4A5E">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>DIM_SUBCATEGORIA</sourceObjSchema>
+<sourceObjName>ID_CATEGORIA</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Chave estrangeira para DIM_CATEGORIA, indicando a qual categoria pertence.]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D1ACA383-DF31-BB91-6D31-45020B2796F9" referredColumn="5BE55102-8AA3-21DD-19BE-D8ABC4CE4962"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="32123168-AE2F-A6CE-4ACF-DA4E972E9E5D" name="PK_DIM_SUBCATEGORIA">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>RM557311</sourceObjSchema>
+<sourceObjName>PK_DIM_SUBCATEGORIA</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:28 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="29F36327-D0F1-3661-74F0-E51D765FF1BD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="88411440-2783-8E87-D2B9-2B92DB0FA62B" schemaObject="5BC418C1-74CB-7FFB-17D5-FA20A8622766" name="PK_DIM_SUBCATEGORIA">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>RM557311</sourceObjSchema>
+<sourceObjName>PK_DIM_SUBCATEGORIA</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:16 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="29F36327-D0F1-3661-74F0-E51D765FF1BD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DC4B992E-A976-2E39-1910-0F96015F42DE" name="FK_SUBCATEGORIA_CATEGORIA">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:41 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1DD7FB49-83BC-9001-B48E-C520952D4A5E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

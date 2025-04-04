@@ -1,0 +1,141 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="547B7922-E68B-E05F-D97D-3CF50E41C169" schemaObject="5BC418C1-74CB-7FFB-17D5-FA20A8622766" name="DIM_BAIRRO">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>RM557311</sourceObjSchema>
+<sourceObjName>DIM_BAIRRO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:13 UTC</createdTime>
+<commentInRDBMS><![CDATA[Dimensão que detalha os bairros, vinculados a uma determinada cidade.]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<typeID>2</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="FK_DIM_BAIRRO" id="36FBD8A7-2B30-F2FF-6719-73F6074254C5">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>DIM_BAIRRO</sourceObjSchema>
+<sourceObjName>FK_DIM_BAIRRO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Chave primária gerada por IDENTITY para a dimensão BAIRRO.]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<defaultOntNull>true</defaultOntNull>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementDisableCache>false</autoIncrementDisableCache>
+<autoIncrementCache>20</autoIncrementCache>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="NOME_BAIRRO" id="6B402993-9939-38E0-EC37-3779B0440C74">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>DIM_BAIRRO</sourceObjSchema>
+<sourceObjName>NOME_BAIRRO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nome do bairro (por exemplo, Bela Vista, Centro).]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NR_POPULACAO_BAIRRO" id="5C3DCEA0-70C2-B720-4F41-8D7D2748137D">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>DIM_BAIRRO</sourceObjSchema>
+<sourceObjName>NR_POPULACAO_BAIRRO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[População estimada do bairro.]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,9,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NR_NIVEL_SEGURANCA" id="51C7BB3F-D261-101E-3A93-630CAA721359">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>DIM_BAIRRO</sourceObjSchema>
+<sourceObjName>NR_NIVEL_SEGURANCA</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Índice ou indicador de segurança atribuído ao bairro, de 0 a 9 (exemplo).]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,1,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_CIDADE" id="5D8F71EE-95C7-CA62-FE3B-B6CB8EFAF4F0">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>DIM_BAIRRO</sourceObjSchema>
+<sourceObjName>ID_CIDADE</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Chave estrangeira para DIM_CIDADE, indicando a cidade a que o bairro pertence.]]></commentInRDBMS>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E31C077C-8DB7-1EE5-9D09-CA108DBBAE68" referredColumn="3EF2F931-6D31-0B4D-4785-FAC4F87BAFA5"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5E6EF195-D5F4-3069-2918-12ECCBCDFBA8" name="PK_DIM_BAIRRO">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>RM557311</sourceObjSchema>
+<sourceObjName>PK_DIM_BAIRRO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:28 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="36FBD8A7-2B30-F2FF-6719-73F6074254C5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1DC09E25-FE90-0D83-F0DC-3867F75F30CF" schemaObject="5BC418C1-74CB-7FFB-17D5-FA20A8622766" name="PK_DIM_BAIRRO">
+<sourceConnName>FIAP</sourceConnName>
+<sourceObjSchema>RM557311</sourceObjSchema>
+<sourceObjName>PK_DIM_BAIRRO</sourceObjName>
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:16 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="36FBD8A7-2B30-F2FF-6719-73F6074254C5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1F50402E-98CD-0EF7-6DEE-4C6A68F841A4" name="FK_BAIRRO_CIDADE">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:50:41 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5D8F71EE-95C7-CA62-FE3B-B6CB8EFAF4F0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

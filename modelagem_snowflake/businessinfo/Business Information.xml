@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BusinessInfoDesign class="oracle.dbtools.crest.model.businessinfo.BusinessInfoDesign" name="Business Information" id="F081B726-B392-7D6B-CF94-6105B22F7E13">
+<createdBy>axel.chepanski</createdBy>
+<createdTime>2025-04-04 13:47:58 UTC</createdTime>
+<ownerDesignName>modelagem_snowflake</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</BusinessInfoDesign>
