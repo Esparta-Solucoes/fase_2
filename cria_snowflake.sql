@@ -538,7 +538,6 @@ ALTER TABLE dim_subcategoria
 
 /* ============================================================
    SEQUENCES E TRIGGERS
-   (com DROP seguro antes da criação)
    ============================================================ */
 
 /* ---------- dim_bairro ---------- */
