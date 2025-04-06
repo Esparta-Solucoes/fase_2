@@ -3,10 +3,7 @@
 --   site:      Oracle Database 12cR2
 --   tipo:      Oracle Database 12cR2
 
-
-
 -- predefined type, no DDL - MDSYS.SDO_GEOMETRY
-
 -- predefined type, no DDL - XMLTYPE
 
 /* ============================================================
@@ -36,12 +33,10 @@ COMMENT ON COLUMN dim_bairro.nr_populacao_bairro IS
 COMMENT ON COLUMN dim_bairro.nr_nivel_seguranca IS
     'Índice ou indicador de segurança atribuído ao bairro, de 0 a 9 (exemplo).';
 
-CREATE UNIQUE INDEX rm557311.pk_dim_bairro ON
-    dim_bairro (
-        sk_bairro
-    ASC );
+CREATE UNIQUE INDEX pk_dim_bairro ON dim_bairro ( sk_bairro );
 
-ALTER TABLE dim_bairro ADD CONSTRAINT pk_dim_bairro PRIMARY KEY ( sk_bairro );
+ALTER TABLE dim_bairro
+  ADD CONSTRAINT pk_dim_bairro PRIMARY KEY ( sk_bairro );
 
 CREATE TABLE dim_categoria (
     sk_categoria           NUMBER NOT NULL,
@@ -65,12 +60,10 @@ COMMENT ON COLUMN dim_categoria.st_categoria IS
 COMMENT ON COLUMN dim_categoria.nr_avaliacao_categoria IS
     'Nota de avaliação média da categoria.';
 
-CREATE UNIQUE INDEX rm557311.pk_dim_categoria ON
-    dim_categoria (
-        sk_categoria
-    ASC );
+CREATE UNIQUE INDEX pk_dim_categoria ON dim_categoria ( sk_categoria );
 
-ALTER TABLE dim_categoria ADD CONSTRAINT pk_dim_categoria PRIMARY KEY ( sk_categoria );
+ALTER TABLE dim_categoria
+  ADD CONSTRAINT pk_dim_categoria PRIMARY KEY ( sk_categoria );
 
 CREATE TABLE dim_centro_distribuicao (
     sk_centro_distribuicao   NUMBER NOT NULL,
@@ -91,12 +84,10 @@ COMMENT ON COLUMN dim_centro_distribuicao.cd_cd IS
 COMMENT ON COLUMN dim_centro_distribuicao.nome_centro_distribuicao IS
     'Nome do Centro de Distribuição (ex.: CD Norte, CD SP-1).';
 
-CREATE UNIQUE INDEX rm557311.pk_dim_centrodist ON
-    dim_centro_distribuicao (
-        sk_centro_distribuicao
-    ASC );
+CREATE UNIQUE INDEX pk_dim_centrodist ON dim_centro_distribuicao ( sk_centro_distribuicao );
 
-ALTER TABLE dim_centro_distribuicao ADD CONSTRAINT pk_dim_centrodist PRIMARY KEY ( sk_centro_distribuicao );
+ALTER TABLE dim_centro_distribuicao
+  ADD CONSTRAINT pk_dim_centrodist PRIMARY KEY ( sk_centro_distribuicao );
 
 CREATE TABLE dim_cidade (
     sk_cidade    NUMBER NOT NULL,
@@ -114,7 +105,7 @@ COMMENT ON COLUMN dim_cidade.sk_cidade IS
     'Chave primária gerada por IDENTITY para a dimensão CIDADE.';
 
 COMMENT ON COLUMN dim_cidade.nome_cidade IS
-    'Nome do município (por exemplo, São Paulo, Curitiba).';
+    'Nome do município (por exemplo, São Paulo, Curitiba).';
 
 COMMENT ON COLUMN dim_cidade.nr_populacao IS
     'População estimada da cidade.';
@@ -125,12 +116,10 @@ COMMENT ON COLUMN dim_cidade.codigo_ibge IS
 COMMENT ON COLUMN dim_cidade.altitude IS
     'Altitude média da cidade em metros.';
 
-CREATE UNIQUE INDEX rm557311.pk_dim_cidade ON
-    dim_cidade (
-        sk_cidade
-    ASC );
+CREATE UNIQUE INDEX pk_dim_cidade ON dim_cidade ( sk_cidade );
 
-ALTER TABLE dim_cidade ADD CONSTRAINT pk_dim_cidade PRIMARY KEY ( sk_cidade );
+ALTER TABLE dim_cidade
+  ADD CONSTRAINT pk_dim_cidade PRIMARY KEY ( sk_cidade );
 
 CREATE TABLE dim_cliente (
     sk_cliente    NUMBER NOT NULL,
@@ -149,7 +138,7 @@ COMMENT ON COLUMN dim_cliente.sk_cliente IS
     'Chave primária gerada por IDENTITY para a dimensão CLIENTE.';
 
 COMMENT ON COLUMN dim_cliente.nr_cliente IS
-    'Código de identificação do cliente no e-commerce.';
+    'Código de identificação do cliente no e‑commerce.';
 
 COMMENT ON COLUMN dim_cliente.nome_cliente IS
     'Nome completo do cliente.';
@@ -163,16 +152,14 @@ COMMENT ON COLUMN dim_cliente.st_cliente IS
 COMMENT ON COLUMN dim_cliente.dt_nascimento IS
     'Data de nascimento do cliente (se disponível).';
 
-CREATE UNIQUE INDEX rm557311.pk_dim_cliente ON
-    dim_cliente (
-        sk_cliente
-    ASC );
+CREATE UNIQUE INDEX pk_dim_cliente ON dim_cliente ( sk_cliente );
 
-ALTER TABLE dim_cliente ADD CONSTRAINT pk_dim_cliente PRIMARY KEY ( sk_cliente );
+ALTER TABLE dim_cliente
+  ADD CONSTRAINT pk_dim_cliente PRIMARY KEY ( sk_cliente );
 
 CREATE TABLE dim_data (
     sk_data         NUMBER NOT NULL,
-    data_completa   DATE NOT NULL,
+    data_completa   DATE   NOT NULL,
     ano             NUMBER(4) NOT NULL,
     mes             NUMBER(2) NOT NULL,
     nome_mes        VARCHAR2(20 BYTE),
@@ -181,35 +168,33 @@ CREATE TABLE dim_data (
 );
 
 COMMENT ON TABLE dim_data IS
-    'Dimensão que armazena detalhes de datas, utilizada como Role-Playing (pedido, previsto, entrega).';
+    'Dimensão que armazena detalhes de datas, utilizada como Role‑Playing (pedido, previsto, entrega).';
 
 COMMENT ON COLUMN dim_data.sk_data IS
     'Chave primária gerada por IDENTITY para a dimensão DATA.';
 
 COMMENT ON COLUMN dim_data.data_completa IS
-    'Campo que armazena o dia exato no formato DATE (inclui hora, min, seg se necessário).';
+    'Campo DATE da ocorrência (pode incluir hora/min/seg).';
 
 COMMENT ON COLUMN dim_data.ano IS
-    'Ano (yyyy).';
+    'Ano (YYYY).';
 
 COMMENT ON COLUMN dim_data.mes IS
-    'Mês numérico (1 a 12).';
+    'Mês (1‑12).';
 
 COMMENT ON COLUMN dim_data.nome_mes IS
-    'Nome do mês (Janeiro, Fevereiro etc.).';
+    'Nome do mês.';
 
 COMMENT ON COLUMN dim_data.dia IS
-    'Dia numérico (1 a 31).';
+    'Dia (1‑31).';
 
 COMMENT ON COLUMN dim_data.nome_dia_semana IS
-    'Nome do dia da semana (segunda, terça etc.).';
+    'Nome do dia da semana.';
 
-CREATE UNIQUE INDEX rm557311.pk_dim_data ON
-    dim_data (
-        sk_data
-    ASC );
+CREATE UNIQUE INDEX pk_dim_data ON dim_data ( sk_data );
 
-ALTER TABLE dim_data ADD CONSTRAINT pk_dim_data PRIMARY KEY ( sk_data );
+ALTER TABLE dim_data
+  ADD CONSTRAINT pk_dim_data PRIMARY KEY ( sk_data );
 
 CREATE TABLE dim_entregador (
     sk_entregador   NUMBER NOT NULL,
@@ -217,7 +202,7 @@ CREATE TABLE dim_entregador (
 );
 
 COMMENT ON TABLE dim_entregador IS
-    'Dimensão que armazena dados de cada entregador (pessoa responsável pelo transporte).';
+    'Dimensão que armazena dados de cada entregador.';
 
 COMMENT ON COLUMN dim_entregador.sk_entregador IS
     'Chave primária gerada por IDENTITY para a dimensão ENTREGADOR.';
@@ -225,12 +210,10 @@ COMMENT ON COLUMN dim_entregador.sk_entregador IS
 COMMENT ON COLUMN dim_entregador.nome_entregador IS
     'Nome do entregador ou profissional responsável pelo envio.';
 
-CREATE UNIQUE INDEX rm557311.pk_dim_entregador ON
-    dim_entregador (
-        sk_entregador
-    ASC );
+CREATE UNIQUE INDEX pk_dim_entregador ON dim_entregador ( sk_entregador );
 
-ALTER TABLE dim_entregador ADD CONSTRAINT pk_dim_entregador PRIMARY KEY ( sk_entregador );
+ALTER TABLE dim_entregador
+  ADD CONSTRAINT pk_dim_entregador PRIMARY KEY ( sk_entregador );
 
 CREATE TABLE dim_estado (
     sk_estado    NUMBER NOT NULL,
@@ -241,26 +224,24 @@ CREATE TABLE dim_estado (
 );
 
 COMMENT ON TABLE dim_estado IS
-    'Dimensão que armazena dados dos Estados (UF), referenciando a região a que pertence.';
+    'Dimensão que armazena dados dos Estados (UF).';
 
 COMMENT ON COLUMN dim_estado.sk_estado IS
     'Chave primária gerada por IDENTITY para a dimensão ESTADO.';
 
 COMMENT ON COLUMN dim_estado.sigla_estado IS
-    'Sigla da unidade federativa (por exemplo, SP, RJ).';
+    'Sigla da UF.';
 
 COMMENT ON COLUMN dim_estado.nome_estado IS
-    'Nome por extenso do Estado (por exemplo, São Paulo, Rio de Janeiro).';
+    'Nome do Estado.';
 
 COMMENT ON COLUMN dim_estado.gentilico IS
-    'Termo que se refere aos habitantes do estado (ex.: paulista, carioca).';
+    'Gentílico (ex.: paulista, carioca).';
 
-CREATE UNIQUE INDEX rm557311.pk_dim_estado ON
-    dim_estado (
-        sk_estado
-    ASC );
+CREATE UNIQUE INDEX pk_dim_estado ON dim_estado ( sk_estado );
 
-ALTER TABLE dim_estado ADD CONSTRAINT pk_dim_estado PRIMARY KEY ( sk_estado );
+ALTER TABLE dim_estado
+  ADD CONSTRAINT pk_dim_estado PRIMARY KEY ( sk_estado );
 
 CREATE TABLE dim_logradouro (
     sk_logradouro   NUMBER NOT NULL,
@@ -271,26 +252,24 @@ CREATE TABLE dim_logradouro (
 );
 
 COMMENT ON TABLE dim_logradouro IS
-    'Dimensão que armazena informações dos logradouros (rua, CEP, número etc.).';
+    'Dimensão de logradouros (rua, CEP, número).';
 
 COMMENT ON COLUMN dim_logradouro.sk_logradouro IS
     'Chave primária gerada por IDENTITY para a dimensão LOGRADOURO.';
 
 COMMENT ON COLUMN dim_logradouro.nome_logradouro IS
-    'Nome da rua/avenida/travessa, etc. (ex.: Av. Paulista).';
+    'Nome da via (ex.: Av. Paulista).';
 
 COMMENT ON COLUMN dim_logradouro.nr_logradouro IS
-    'Número do endereço do logradouro (ex.: 100, 123B, S/N).';
+    'Número (ex.: 100, S/N).';
 
 COMMENT ON COLUMN dim_logradouro.nr_cep IS
-    'CEP (Código de Endereçamento Postal).';
+    'CEP.';
 
-CREATE UNIQUE INDEX rm557311.pk_dim_logradouro ON
-    dim_logradouro (
-        sk_logradouro
-    ASC );
+CREATE UNIQUE INDEX pk_dim_logradouro ON dim_logradouro ( sk_logradouro );
 
-ALTER TABLE dim_logradouro ADD CONSTRAINT pk_dim_logradouro PRIMARY KEY ( sk_logradouro );
+ALTER TABLE dim_logradouro
+  ADD CONSTRAINT pk_dim_logradouro PRIMARY KEY ( sk_logradouro );
 
 CREATE TABLE dim_produto (
     sk_produto      NUMBER NOT NULL,
@@ -301,26 +280,24 @@ CREATE TABLE dim_produto (
 );
 
 COMMENT ON TABLE dim_produto IS
-    'Dimensão que armazena informações detalhadas de cada produto.';
+    'Dimensão que armazena detalhes de produtos.';
 
 COMMENT ON COLUMN dim_produto.sk_produto IS
     'Chave primária gerada por IDENTITY para a dimensão PRODUTO.';
 
 COMMENT ON COLUMN dim_produto.nome_produto IS
-    'Nome do produto (ex.: iPhone 14, TV 50 polegadas).';
+    'Nome do produto.';
 
 COMMENT ON COLUMN dim_produto.embalagem IS
-    'Tipo de embalagem, se houver (ex.: caixa, envelope etc.).';
+    'Tipo de embalagem (se aplicável).';
 
 COMMENT ON COLUMN dim_produto.id_subcategoria IS
-    'Chave estrangeira para DIM_SUBCATEGORIA, definindo a subcategoria deste produto.';
+    'Chave natural para integração externa.';
 
-CREATE UNIQUE INDEX rm557311.pk_dim_produto ON
-    dim_produto (
-        sk_produto
-    ASC );
+CREATE UNIQUE INDEX pk_dim_produto ON dim_produto ( sk_produto );
 
-ALTER TABLE dim_produto ADD CONSTRAINT pk_dim_produto PRIMARY KEY ( sk_produto );
+ALTER TABLE dim_produto
+  ADD CONSTRAINT pk_dim_produto PRIMARY KEY ( sk_produto );
 
 CREATE TABLE dim_regiao (
     sk_regiao   NUMBER NOT NULL,
@@ -328,20 +305,18 @@ CREATE TABLE dim_regiao (
 );
 
 COMMENT ON TABLE dim_regiao IS
-    'Dimensão que armazena informações de macrorregiões (Norte, Nordeste, Centro-Oeste, Sudeste, Sul).';
+    'Dimensão de macrorregiões (Norte, Nordeste, etc.).';
 
 COMMENT ON COLUMN dim_regiao.sk_regiao IS
     'Chave primária gerada por IDENTITY para a dimensão REGIAO.';
 
 COMMENT ON COLUMN dim_regiao.nome_regiao IS
-    'Nome da região geográfica (Norte, Nordeste, etc.).';
+    'Nome da região.';
 
-CREATE UNIQUE INDEX rm557311.pk_dim_regiao ON
-    dim_regiao (
-        sk_regiao
-    ASC );
+CREATE UNIQUE INDEX pk_dim_regiao ON dim_regiao ( sk_regiao );
 
-ALTER TABLE dim_regiao ADD CONSTRAINT pk_dim_regiao PRIMARY KEY ( sk_regiao );
+ALTER TABLE dim_regiao
+  ADD CONSTRAINT pk_dim_regiao PRIMARY KEY ( sk_regiao );
 
 CREATE TABLE dim_subcategoria (
     sk_subcategoria            NUMBER NOT NULL,
@@ -352,26 +327,24 @@ CREATE TABLE dim_subcategoria (
 );
 
 COMMENT ON TABLE dim_subcategoria IS
-    'Dimensão que armazena as subcategorias de produtos, vinculadas a uma categoria maior.';
+    'Dimensão de subcategorias de produtos.';
 
 COMMENT ON COLUMN dim_subcategoria.sk_subcategoria IS
     'Chave primária gerada por IDENTITY para a dimensão SUBCATEGORIA.';
 
 COMMENT ON COLUMN dim_subcategoria.nome_subcategoria IS
-    'Nome da subcategoria (ex.: Smartphones, Geladeiras).';
+    'Nome da subcategoria.';
 
 COMMENT ON COLUMN dim_subcategoria.st_sub_categoria IS
-    'Status da subcategoria (A=Ativa, I=Inativa).';
+    'Status (A/I).';
 
 COMMENT ON COLUMN dim_subcategoria.nr_avaliacao_sub_categoria IS
-    'Nota de avaliação média da subcategoria.';
+    'Nota média da subcategoria.';
 
-CREATE UNIQUE INDEX rm557311.pk_dim_subcategoria ON
-    dim_subcategoria (
-        sk_subcategoria
-    ASC );
+CREATE UNIQUE INDEX pk_dim_subcategoria ON dim_subcategoria ( sk_subcategoria );
 
-ALTER TABLE dim_subcategoria ADD CONSTRAINT pk_dim_subcategoria PRIMARY KEY ( sk_subcategoria );
+ALTER TABLE dim_subcategoria
+  ADD CONSTRAINT pk_dim_subcategoria PRIMARY KEY ( sk_subcategoria );
 
 /* ============================================================
    TABELA FATO
@@ -399,142 +372,91 @@ CREATE TABLE fato_entrega (
 );
 
 COMMENT ON TABLE fato_entrega IS
-    'Tabela Fato (grão: Pedido + Item). Armazena medições de entrega, ligando-se às dimensões Cliente, Produto, CD, Entregador e Datas.'
-    ;
-
-COMMENT ON COLUMN fato_entrega.sk_produto IS
-    'FK para DIM_PRODUTO.';
-
-COMMENT ON COLUMN fato_entrega.sk_centro_distribuicao IS
-    'FK para DIM_CENTRO_DISTRIBUICAO (qual CD despachou o produto).';
-
-COMMENT ON COLUMN fato_entrega.sk_data_prev IS
-    'FK para a data de previsão da DIM_DATA.';
-
-COMMENT ON COLUMN fato_entrega.sk_data_ped IS
-    'FK para a data do pedido da DIM_DATA.';
-
-COMMENT ON COLUMN fato_entrega.sk_cliente IS
-    'FK para DIM_CLIENTE (quem recebe o produto).';
+    'Tabela Fato (grão: Pedido + Item).';
 
 COMMENT ON COLUMN fato_entrega.nr_pedido IS
-    'Número do pedido (código natural do sistema transacional). Parte 1 da PK.';
+    'Número do pedido (parte 1 da PK).';
 
 COMMENT ON COLUMN fato_entrega.nr_item IS
-    'Número sequencial do item dentro do pedido. Parte 2 da PK.';
+    'Item do pedido (parte 2 da PK).';
 
-COMMENT ON COLUMN fato_entrega.sk_data_entrega IS
-    'FK para a data de entrega da DIM_DATA.';
-
-COMMENT ON COLUMN fato_entrega.sk_entregador IS
-    'FK para DIM_ENTREGADOR (profissional que realizou a entrega).';
-
-COMMENT ON COLUMN fato_entrega.quantidade IS
-    'Quantidade de itens solicitados no pedido.';
-
-COMMENT ON COLUMN fato_entrega.qt_prod_entregue IS
-    'Quantidade efetiva de itens que foram entregues (pode variar da quantidade pedida).';
-
-COMMENT ON COLUMN fato_entrega.vl_unitario IS
-    'Valor unitário do item no momento da compra.';
-
-COMMENT ON COLUMN fato_entrega.vl_total IS
-    'Valor total da linha, normalmente QUANTIDADE x VL_UNITARIO.';
-
-COMMENT ON COLUMN fato_entrega.perc_icms IS
-    'Percentual de ICMS aplicado ao produto neste pedido.';
-
-COMMENT ON COLUMN fato_entrega.nota_embalagem IS
-    'Avaliação (0 a 10) do cliente quanto à embalagem do produto.';
-
-COMMENT ON COLUMN fato_entrega.nota_pontualidade IS
-    'Avaliação (0 a 10) do cliente quanto à pontualidade (cumprimento do prazo).';
-
-COMMENT ON COLUMN fato_entrega.nota_cortesia IS
-    'Avaliação (0 a 10) do cliente quanto à cordialidade do entregador.';
-
-COMMENT ON COLUMN fato_entrega.tempo_entrega_min IS
-    'Tempo total de entrega em minutos, calculado entre pedido e entrega real.';
-
-CREATE UNIQUE INDEX rm557311.pk_fato_entrega ON
-    fato_entrega (
-        nr_pedido
-    ASC,
-        nr_item
-    ASC );
+-- Índice auxiliar (não conflita com a PK)
+CREATE UNIQUE INDEX uidx_fato_entrega ON fato_entrega ( nr_pedido, nr_item );
 
 ALTER TABLE fato_entrega
-    ADD CONSTRAINT pk_fato_entrega PRIMARY KEY ( nr_pedido,
-                                                 nr_item,
-                                                 sk_produto,
-                                                 sk_centro_distribuicao,
-                                                 sk_data_prev,
-                                                 sk_data_ped,
-                                                 sk_cliente );
+  ADD CONSTRAINT pk_fato_entrega PRIMARY KEY (
+      nr_pedido,
+      nr_item,
+      sk_produto,
+      sk_centro_distribuicao,
+      sk_data_prev,
+      sk_data_ped,
+      sk_cliente
+  );
 
 /* ============================================================
    CHAVES ESTRANGEIRAS
    ============================================================ */
 
 ALTER TABLE dim_bairro
-    ADD CONSTRAINT fk_bairro_cidade FOREIGN KEY ( sk_cidade )
-        REFERENCES dim_cidade ( sk_cidade );
+  ADD CONSTRAINT fk_bairro_cidade FOREIGN KEY ( sk_cidade )
+      REFERENCES dim_cidade ( sk_cidade );
 
 ALTER TABLE dim_centro_distribuicao
-    ADD CONSTRAINT fk_centro_logra FOREIGN KEY ( sk_logradouro )
-        REFERENCES dim_logradouro ( sk_logradouro );
+  ADD CONSTRAINT fk_centro_logra FOREIGN KEY ( sk_logradouro )
+      REFERENCES dim_logradouro ( sk_logradouro );
 
 ALTER TABLE dim_cidade
-    ADD CONSTRAINT fk_cidade_estado FOREIGN KEY ( sk_estado )
-        REFERENCES dim_estado ( sk_estado );
+  ADD CONSTRAINT fk_cidade_estado FOREIGN KEY ( sk_estado )
+      REFERENCES dim_estado ( sk_estado );
 
 ALTER TABLE dim_cliente
-    ADD CONSTRAINT fk_cliente_logra FOREIGN KEY ( sk_logradouro )
-        REFERENCES dim_logradouro ( sk_logradouro );
+  ADD CONSTRAINT fk_cliente_logra FOREIGN KEY ( sk_logradouro )
+      REFERENCES dim_logradouro ( sk_logradouro );
 
 ALTER TABLE dim_estado
-    ADD CONSTRAINT fk_estado_regiao FOREIGN KEY ( sk_regiao )
-        REFERENCES dim_regiao ( sk_regiao );
+  ADD CONSTRAINT fk_estado_regiao FOREIGN KEY ( sk_regiao )
+      REFERENCES dim_regiao ( sk_regiao );
 
 ALTER TABLE fato_entrega
-    ADD CONSTRAINT fk_fato_centro FOREIGN KEY ( sk_centro_distribuicao )
-        REFERENCES dim_centro_distribuicao ( sk_centro_distribuicao );
+  ADD CONSTRAINT fk_fato_centro FOREIGN KEY ( sk_centro_distribuicao )
+      REFERENCES dim_centro_distribuicao ( sk_centro_distribuicao );
 
 ALTER TABLE fato_entrega
-    ADD CONSTRAINT fk_fato_cliente FOREIGN KEY ( sk_cliente )
-        REFERENCES dim_cliente ( sk_cliente );
+  ADD CONSTRAINT fk_fato_cliente FOREIGN KEY ( sk_cliente )
+      REFERENCES dim_cliente ( sk_cliente );
 
 ALTER TABLE fato_entrega
-    ADD CONSTRAINT fk_fato_data_entr FOREIGN KEY ( sk_data_entrega )
-        REFERENCES dim_data ( sk_data );
+  ADD CONSTRAINT fk_fato_data_entr FOREIGN KEY ( sk_data_entrega )
+      REFERENCES dim_data ( sk_data );
 
 ALTER TABLE fato_entrega
-    ADD CONSTRAINT fk_fato_data_ped FOREIGN KEY ( sk_data_ped )
-        REFERENCES dim_data ( sk_data );
+  ADD CONSTRAINT fk_fato_data_ped FOREIGN KEY ( sk_data_ped )
+      REFERENCES dim_data ( sk_data );
 
 ALTER TABLE fato_entrega
-    ADD CONSTRAINT fk_fato_data_prv FOREIGN KEY ( sk_data_prev )
-        REFERENCES dim_data ( sk_data );
+  ADD CONSTRAINT fk_fato_data_prv FOREIGN KEY ( sk_data_prev )
+      REFERENCES dim_data ( sk_data );
 
 ALTER TABLE fato_entrega
-    ADD CONSTRAINT fk_fato_entregador FOREIGN KEY ( sk_entregador )
-        REFERENCES dim_entregador ( sk_entregador );
+  ADD CONSTRAINT fk_fato_entregador FOREIGN KEY ( sk_entregador )
+      REFERENCES dim_entregador ( sk_entregador );
 
 ALTER TABLE fato_entrega
-    ADD CONSTRAINT fk_fato_produto FOREIGN KEY ( sk_produto )
-        REFERENCES dim_produto ( sk_produto );
+  ADD CONSTRAINT fk_fato_produto FOREIGN KEY ( sk_produto )
+      REFERENCES dim_produto ( sk_produto );
 
 ALTER TABLE dim_logradouro
-    ADD CONSTRAINT fk_logra_bairro FOREIGN KEY ( sk_bairro )
-        REFERENCES dim_bairro ( sk_bairro );
+  ADD CONSTRAINT fk_logra_bairro FOREIGN KEY ( sk_bairro )
+      REFERENCES dim_bairro ( sk_bairro );
 
 ALTER TABLE dim_produto
-    ADD CONSTRAINT fk_produto_subcat FOREIGN KEY ( sk_subcategoria )
-        REFERENCES dim_subcategoria ( sk_subcategoria );
+  ADD CONSTRAINT fk_produto_subcat FOREIGN KEY ( sk_subcategoria )
+      REFERENCES dim_subcategoria ( sk_subcategoria );
 
 ALTER TABLE dim_subcategoria
-    ADD CONSTRAINT fk_subcat_cat FOREIGN KEY ( sk_categoria )
-        REFERENCES dim_categoria ( sk_categoria );
+  ADD CONSTRAINT fk_subcat_cat FOREIGN KEY ( sk_categoria )
+      REFERENCES dim_categoria ( sk_categoria );
 
 /* ============================================================
    SEQUENCES E TRIGGERS
@@ -543,9 +465,8 @@ ALTER TABLE dim_subcategoria
 /* ---------- dim_bairro ---------- */
 BEGIN
     EXECUTE IMMEDIATE 'DROP SEQUENCE dim_bairro_sk_bairro_seq';
-EXCEPTION
-    WHEN OTHERS THEN
-        IF SQLCODE != -2289 THEN RAISE; END IF;
+EXCEPTION WHEN OTHERS THEN
+    IF SQLCODE != -2289 THEN RAISE; END IF;
 END;
 /
 CREATE SEQUENCE dim_bairro_sk_bairro_seq START WITH 1 CACHE 20;
@@ -563,9 +484,8 @@ END;
 /* ---------- dim_categoria ---------- */
 BEGIN
     EXECUTE IMMEDIATE 'DROP SEQUENCE dim_categoria_sk_categoria_seq';
-EXCEPTION
-    WHEN OTHERS THEN
-        IF SQLCODE != -2289 THEN RAISE; END IF;
+EXCEPTION WHEN OTHERS THEN
+    IF SQLCODE != -2289 THEN RAISE; END IF;
 END;
 /
 CREATE SEQUENCE dim_categoria_sk_categoria_seq START WITH 1 CACHE 20;
@@ -583,9 +503,8 @@ END;
 /* ---------- dim_centro_distribuicao ---------- */
 BEGIN
     EXECUTE IMMEDIATE 'DROP SEQUENCE dim_centro_distribuicao_sk_centro_distribuicao_seq';
-EXCEPTION
-    WHEN OTHERS THEN
-        IF SQLCODE != -2289 THEN RAISE; END IF;
+EXCEPTION WHEN OTHERS THEN
+    IF SQLCODE != -2289 THEN RAISE; END IF;
 END;
 /
 CREATE SEQUENCE dim_centro_distribuicao_sk_centro_distribuicao_seq START WITH 1 CACHE 20;
@@ -603,9 +522,8 @@ END;
 /* ---------- dim_cidade ---------- */
 BEGIN
     EXECUTE IMMEDIATE 'DROP SEQUENCE dim_cidade_sk_cidade_seq';
-EXCEPTION
-    WHEN OTHERS THEN
-        IF SQLCODE != -2289 THEN RAISE; END IF;
+EXCEPTION WHEN OTHERS THEN
+    IF SQLCODE != -2289 THEN RAISE; END IF;
 END;
 /
 CREATE SEQUENCE dim_cidade_sk_cidade_seq START WITH 1 CACHE 20;
@@ -623,9 +541,8 @@ END;
 /* ---------- dim_cliente ---------- */
 BEGIN
     EXECUTE IMMEDIATE 'DROP SEQUENCE dim_cliente_sk_cliente_seq';
-EXCEPTION
-    WHEN OTHERS THEN
-        IF SQLCODE != -2289 THEN RAISE; END IF;
+EXCEPTION WHEN OTHERS THEN
+    IF SQLCODE != -2289 THEN RAISE; END IF;
 END;
 /
 CREATE SEQUENCE dim_cliente_sk_cliente_seq START WITH 1 CACHE 20;
@@ -643,9 +560,8 @@ END;
 /* ---------- dim_data ---------- */
 BEGIN
     EXECUTE IMMEDIATE 'DROP SEQUENCE dim_data_sk_data_seq';
-EXCEPTION
-    WHEN OTHERS THEN
-        IF SQLCODE != -2289 THEN RAISE; END IF;
+EXCEPTION WHEN OTHERS THEN
+    IF SQLCODE != -2289 THEN RAISE; END IF;
 END;
 /
 CREATE SEQUENCE dim_data_sk_data_seq START WITH 1 CACHE 20;
@@ -663,9 +579,8 @@ END;
 /* ---------- dim_entregador ---------- */
 BEGIN
     EXECUTE IMMEDIATE 'DROP SEQUENCE dim_entregador_sk_entregador_seq';
-EXCEPTION
-    WHEN OTHERS THEN
-        IF SQLCODE != -2289 THEN RAISE; END IF;
+EXCEPTION WHEN OTHERS THEN
+    IF SQLCODE != -2289 THEN RAISE; END IF;
 END;
 /
 CREATE SEQUENCE dim_entregador_sk_entregador_seq START WITH 1 CACHE 20;
@@ -683,9 +598,8 @@ END;
 /* ---------- dim_estado ---------- */
 BEGIN
     EXECUTE IMMEDIATE 'DROP SEQUENCE dim_estado_sk_estado_seq';
-EXCEPTION
-    WHEN OTHERS THEN
-        IF SQLCODE != -2289 THEN RAISE; END IF;
+EXCEPTION WHEN OTHERS THEN
+    IF SQLCODE != -2289 THEN RAISE; END IF;
 END;
 /
 CREATE SEQUENCE dim_estado_sk_estado_seq START WITH 1 CACHE 20;
@@ -703,9 +617,8 @@ END;
 /* ---------- dim_logradouro ---------- */
 BEGIN
     EXECUTE IMMEDIATE 'DROP SEQUENCE dim_logradouro_sk_logradouro_seq';
-EXCEPTION
-    WHEN OTHERS THEN
-        IF SQLCODE != -2289 THEN RAISE; END IF;
+EXCEPTION WHEN OTHERS THEN
+    IF SQLCODE != -2289 THEN RAISE; END IF;
 END;
 /
 CREATE SEQUENCE dim_logradouro_sk_logradouro_seq START WITH 1 CACHE 20;
@@ -723,9 +636,8 @@ END;
 /* ---------- dim_produto ---------- */
 BEGIN
     EXECUTE IMMEDIATE 'DROP SEQUENCE dim_produto_sk_produto_seq';
-EXCEPTION
-    WHEN OTHERS THEN
-        IF SQLCODE != -2289 THEN RAISE; END IF;
+EXCEPTION WHEN OTHERS THEN
+    IF SQLCODE != -2289 THEN RAISE; END IF;
 END;
 /
 CREATE SEQUENCE dim_produto_sk_produto_seq START WITH 1 CACHE 20;
@@ -743,9 +655,8 @@ END;
 /* ---------- dim_regiao ---------- */
 BEGIN
     EXECUTE IMMEDIATE 'DROP SEQUENCE dim_regiao_sk_regiao_seq';
-EXCEPTION
-    WHEN OTHERS THEN
-        IF SQLCODE != -2289 THEN RAISE; END IF;
+EXCEPTION WHEN OTHERS THEN
+    IF SQLCODE != -2289 THEN RAISE; END IF;
 END;
 /
 CREATE SEQUENCE dim_regiao_sk_regiao_seq START WITH 1 CACHE 20;
@@ -763,9 +674,8 @@ END;
 /* ---------- dim_subcategoria ---------- */
 BEGIN
     EXECUTE IMMEDIATE 'DROP SEQUENCE dim_subcategoria_sk_subcategoria_seq';
-EXCEPTION
-    WHEN OTHERS THEN
-        IF SQLCODE != -2289 THEN RAISE; END IF;
+EXCEPTION WHEN OTHERS THEN
+    IF SQLCODE != -2289 THEN RAISE; END IF;
 END;
 /
 CREATE SEQUENCE dim_subcategoria_sk_subcategoria_seq START WITH 1 CACHE 20;
@@ -783,7 +693,6 @@ END;
 /* ============================================================
    RELATÓRIO DE OBJETOS CRIADOS
    ============================================================ */
-
 -- CREATE TABLE                            13
 -- CREATE INDEX                            13
 -- ALTER TABLE                             28
