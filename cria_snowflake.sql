@@ -15,7 +15,10 @@ CREATE TABLE dim_bairro (
     sk_cidade           NUMBER NOT NULL,
     nome_bairro         VARCHAR2(100 BYTE) NOT NULL,
     nr_populacao_bairro NUMBER(9),
-    nr_nivel_seguranca  NUMBER(1)
+    nr_nivel_seguranca  NUMBER(1),
+    nm_origem_dados     VARCHAR2(40) NOT NULL,
+    dt_inicio           DATE,
+    dt_termino          DATE
 );
 
 COMMENT ON TABLE dim_bairro IS
@@ -42,7 +45,10 @@ CREATE TABLE dim_categoria (
     sk_categoria           NUMBER NOT NULL,
     nome_categoria         VARCHAR2(100 BYTE) NOT NULL,
     st_categoria           CHAR(1 BYTE) NOT NULL,
-    nr_avaliacao_categoria NUMBER(3, 1)
+    nr_avaliacao_categoria NUMBER(3, 1),
+    nm_origem_dados        VARCHAR2(40) NOT NULL,
+    dt_inicio              DATE,
+    dt_termino             DATE
 );
 
 COMMENT ON TABLE dim_categoria IS
@@ -69,7 +75,10 @@ CREATE TABLE dim_centro_distribuicao (
     sk_centro_distribuicao   NUMBER NOT NULL,
     sk_logradouro            NUMBER NOT NULL,
     cd_cd                    NUMBER NOT NULL,
-    nome_centro_distribuicao VARCHAR2(100 BYTE) NOT NULL
+    nome_centro_distribuicao VARCHAR2(100 BYTE) NOT NULL,
+    nm_origem_dados          VARCHAR2(40) NOT NULL,
+    dt_inicio                DATE,
+    dt_termino               DATE
 );
 
 COMMENT ON TABLE dim_centro_distribuicao IS
@@ -90,12 +99,15 @@ ALTER TABLE dim_centro_distribuicao
   ADD CONSTRAINT pk_dim_centrodist PRIMARY KEY ( sk_centro_distribuicao );
 
 CREATE TABLE dim_cidade (
-    sk_cidade    NUMBER NOT NULL,
-    sk_estado    NUMBER NOT NULL,
-    nome_cidade  VARCHAR2(100 BYTE) NOT NULL,
-    nr_populacao NUMBER(10),
-    codigo_ibge  NUMBER(10),
-    altitude     NUMBER(5)
+    sk_cidade       NUMBER NOT NULL,
+    sk_estado       NUMBER NOT NULL,
+    nome_cidade     VARCHAR2(100 BYTE) NOT NULL,
+    nr_populacao    NUMBER(10),
+    codigo_ibge     NUMBER(10),
+    altitude        NUMBER(5),
+    nm_origem_dados VARCHAR2(40) NOT NULL,
+    dt_inicio       DATE,
+    dt_termino      DATE
 );
 
 COMMENT ON TABLE dim_cidade IS
@@ -122,13 +134,16 @@ ALTER TABLE dim_cidade
   ADD CONSTRAINT pk_dim_cidade PRIMARY KEY ( sk_cidade );
 
 CREATE TABLE dim_cliente (
-    sk_cliente    NUMBER NOT NULL,
-    sk_logradouro NUMBER NOT NULL,
-    nr_cliente    NUMBER NOT NULL,
-    nome_cliente  VARCHAR2(100 BYTE) NOT NULL,
-    nr_estrelas   NUMBER(1),
-    st_cliente    CHAR(1 BYTE),
-    dt_nascimento DATE
+    sk_cliente      NUMBER NOT NULL,
+    sk_logradouro   NUMBER NOT NULL,
+    nr_cliente      NUMBER NOT NULL,
+    nome_cliente    VARCHAR2(100 BYTE) NOT NULL,
+    nr_estrelas     NUMBER(1),
+    st_cliente      CHAR(1 BYTE),
+    dt_nascimento   DATE,
+    nm_origem_dados VARCHAR2(40) NOT NULL,
+    dt_inicio       DATE,
+    dt_termino      DATE
 );
 
 COMMENT ON TABLE dim_cliente IS
@@ -164,7 +179,10 @@ CREATE TABLE dim_data (
     mes             NUMBER(2) NOT NULL,
     nome_mes        VARCHAR2(20 BYTE),
     dia             NUMBER(2) NOT NULL,
-    nome_dia_semana VARCHAR2(20 BYTE)
+    nome_dia_semana VARCHAR2(20 BYTE),
+    nm_origem_dados VARCHAR2(40) NOT NULL,
+    dt_inicio       DATE,
+    dt_termino      DATE
 );
 
 COMMENT ON TABLE dim_data IS
@@ -198,7 +216,10 @@ ALTER TABLE dim_data
 
 CREATE TABLE dim_entregador (
     sk_entregador   NUMBER NOT NULL,
-    nome_entregador VARCHAR2(100 BYTE) NOT NULL
+    nome_entregador VARCHAR2(100 BYTE) NOT NULL,
+    nm_origem_dados VARCHAR2(40) NOT NULL,
+    dt_inicio       DATE,
+    dt_termino      DATE
 );
 
 COMMENT ON TABLE dim_entregador IS
@@ -216,11 +237,14 @@ ALTER TABLE dim_entregador
   ADD CONSTRAINT pk_dim_entregador PRIMARY KEY ( sk_entregador );
 
 CREATE TABLE dim_estado (
-    sk_estado    NUMBER NOT NULL,
-    sk_regiao    NUMBER NOT NULL,
-    sigla_estado CHAR(2 BYTE) NOT NULL,
-    nome_estado  VARCHAR2(50 BYTE) NOT NULL,
-    gentilico    VARCHAR2(50)
+    sk_estado       NUMBER NOT NULL,
+    sk_regiao       NUMBER NOT NULL,
+    sigla_estado    CHAR(2 BYTE) NOT NULL,
+    nome_estado     VARCHAR2(50 BYTE) NOT NULL,
+    gentilico       VARCHAR2(50),
+    nm_origem_dados VARCHAR2(40) NOT NULL,
+    dt_inicio       DATE,
+    dt_termino      DATE
 );
 
 COMMENT ON TABLE dim_estado IS
@@ -248,7 +272,10 @@ CREATE TABLE dim_logradouro (
     sk_bairro       NUMBER NOT NULL,
     nome_logradouro VARCHAR2(100 BYTE),
     nr_logradouro   VARCHAR2(10 BYTE),
-    nr_cep          VARCHAR2(15 BYTE)
+    nr_cep          VARCHAR2(15 BYTE),
+    nm_origem_dados VARCHAR2(40) NOT NULL,
+    dt_inicio       DATE,
+    dt_termino      DATE
 );
 
 COMMENT ON TABLE dim_logradouro IS
@@ -276,7 +303,10 @@ CREATE TABLE dim_produto (
     sk_subcategoria NUMBER NOT NULL,
     nome_produto    VARCHAR2(150 BYTE) NOT NULL,
     embalagem       VARCHAR2(50 BYTE),
-    id_subcategoria NUMBER NOT NULL
+    id_subcategoria NUMBER NOT NULL,
+    nm_origem_dados VARCHAR2(40) NOT NULL,
+    dt_inicio       DATE,
+    dt_termino      DATE
 );
 
 COMMENT ON TABLE dim_produto IS
@@ -300,8 +330,11 @@ ALTER TABLE dim_produto
   ADD CONSTRAINT pk_dim_produto PRIMARY KEY ( sk_produto );
 
 CREATE TABLE dim_regiao (
-    sk_regiao   NUMBER NOT NULL,
-    nome_regiao VARCHAR2(20 BYTE) NOT NULL
+    sk_regiao       NUMBER NOT NULL,
+    nome_regiao     VARCHAR2(20 BYTE) NOT NULL,
+    nm_origem_dados VARCHAR2(40) NOT NULL,
+    dt_inicio       DATE,
+    dt_termino      DATE
 );
 
 COMMENT ON TABLE dim_regiao IS
@@ -323,7 +356,10 @@ CREATE TABLE dim_subcategoria (
     sk_categoria               NUMBER NOT NULL,
     nome_subcategoria          VARCHAR2(100 BYTE) NOT NULL,
     st_sub_categoria           CHAR(1 BYTE) NOT NULL,
-    nr_avaliacao_sub_categoria NUMBER(3, 1)
+    nr_avaliacao_sub_categoria NUMBER(3, 1),
+    nm_origem_dados            VARCHAR2(40) NOT NULL,
+    dt_inicio                  DATE,
+    dt_termino                 DATE
 );
 
 COMMENT ON TABLE dim_subcategoria IS
@@ -692,7 +728,7 @@ END;
 
 /* ============================================================
    RELATÓRIO DE OBJETOS CRIADOS
-   ============================================================ */
+   ============================================================
 -- CREATE TABLE                            13
 -- CREATE INDEX                            13
 -- ALTER TABLE                             28
