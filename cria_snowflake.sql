@@ -179,10 +179,7 @@ CREATE TABLE dim_data (
     mes             NUMBER(2) NOT NULL,
     nome_mes        VARCHAR2(20 BYTE),
     dia             NUMBER(2) NOT NULL,
-    nome_dia_semana VARCHAR2(20 BYTE),
-    nm_origem_dados VARCHAR2(40) NOT NULL,
-    dt_inicio       DATE,
-    dt_termino      DATE
+    nome_dia_semana VARCHAR2(20 BYTE)
 );
 
 COMMENT ON TABLE dim_data IS
